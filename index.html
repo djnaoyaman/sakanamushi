@@ -177,6 +177,24 @@
     cursor:pointer;
     color:var(--gray);
   }
+  .sound-toggle{
+    position:fixed;
+    bottom:16px;
+    right:16px;
+    z-index:60;
+    font-size:.7rem;
+    letter-spacing:.1em;
+    padding:7px 13px;
+    background:var(--paper);
+    border:1px solid var(--gray-light);
+    color:var(--gray);
+    cursor:pointer;
+    user-select:none;
+  }
+  .sound-toggle:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  @media (max-width:520px){
+    .sound-toggle{bottom:10px;right:10px;padding:6px 11px;font-size:.65rem;}
+  }
   .title-eyebrow{font-size:.72rem;letter-spacing:.3em;color:var(--gray);margin-bottom:6px;}
   .title-main{
     font-size:clamp(1.7rem,6vw,2.6rem);
@@ -538,6 +556,8 @@
 </style>
 </head>
 <body data-view="splash">
+
+<div class="sound-toggle" id="soundToggle" role="button" tabindex="0" aria-label="BGMと音のオン・オフ">BGM ON</div>
 
 <div class="screen screen-splash" id="splashScreen">
   <div class="splash-produce">Produce</div>
@@ -1164,13 +1184,120 @@ function trackPageView(v){
     page_path: path
   });
 }
+// --- おと（BGM・SE）まわり。外部音源は使わず、Web Audio APIでその場で鳴らす。 ---
+let audioEnabled = true;
+let audioCtx = null;
+
+function ensureAudioCtx(){
+  const Ctx = window.AudioContext || window.webkitAudioContext;
+  if(!Ctx) return null;
+  if(!audioCtx) audioCtx = new Ctx();
+  if(audioCtx.state === 'suspended') audioCtx.resume();
+  return audioCtx;
+}
+
+function playTone(ctx, freq, startTime, duration, type, peakGain){
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.type = type;
+  osc.frequency.setValueAtTime(freq, startTime);
+  gain.gain.setValueAtTime(0.0001, startTime);
+  gain.gain.exponentialRampToValueAtTime(peakGain, startTime + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+  osc.connect(gain).connect(ctx.destination);
+  osc.start(startTime);
+  osc.stop(startTime + duration + 0.03);
+}
+
+function playBuzz(ctx, startTime, duration){
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.type = 'sawtooth';
+  osc.frequency.setValueAtTime(170, startTime);
+  osc.frequency.linearRampToValueAtTime(120, startTime + duration);
+  gain.gain.setValueAtTime(0.0001, startTime);
+  gain.gain.exponentialRampToValueAtTime(0.16, startTime + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+  osc.connect(gain).connect(ctx.destination);
+  osc.start(startTime);
+  osc.stop(startTime + duration + 0.03);
+}
+
+function playCorrectSound(){
+  if(!audioEnabled) return;
+  const ctx = ensureAudioCtx();
+  if(!ctx) return;
+  const t = ctx.currentTime;
+  playTone(ctx, 783.99, t, 0.16, 'sine', 0.22);
+  playTone(ctx, 659.25, t + 0.14, 0.26, 'sine', 0.22);
+}
+
+function playWrongSound(){
+  if(!audioEnabled) return;
+  const ctx = ensureAudioCtx();
+  if(!ctx) return;
+  const t = ctx.currentTime;
+  playBuzz(ctx, t, 0.18);
+  playBuzz(ctx, t + 0.22, 0.2);
+}
+
+// クイズ回答中に流す、あかるいペンタトニックの小さなループ。
+const BGM_SCALE = [523.25, 587.33, 659.25, 783.99, 880.0];
+const BGM_MELODY = [0,2,1,3,2,0,1,4, 0,1,2,3,4,3,2,1];
+let bgmPlaying = false;
+let bgmTimer = null;
+let bgmStep = 0;
+
+function scheduleBgmNote(){
+  if(!bgmPlaying){ bgmTimer = null; return; }
+  if(audioEnabled){
+    const ctx = ensureAudioCtx();
+    if(ctx){
+      const freq = BGM_SCALE[BGM_MELODY[bgmStep % BGM_MELODY.length]];
+      playTone(ctx, freq, ctx.currentTime, 0.32, 'triangle', 0.05);
+    }
+  }
+  bgmStep++;
+  bgmTimer = setTimeout(scheduleBgmNote, 380);
+}
+
+function startBgm(){
+  if(bgmPlaying) return;
+  bgmPlaying = true;
+  scheduleBgmNote();
+}
+
+function stopBgm(){
+  bgmPlaying = false;
+  if(bgmTimer){ clearTimeout(bgmTimer); bgmTimer = null; }
+}
+
+function setAudioEnabled(v){
+  audioEnabled = v;
+  const btn = document.getElementById('soundToggle');
+  btn.textContent = v ? 'BGM ON' : 'BGM OFF';
+  btn.classList.toggle('muted', !v);
+  if(!v){ stopBgm(); }
+  else if(document.body.dataset.view === 'deck'){ startBgm(); }
+}
+
+document.getElementById('soundToggle').addEventListener('click', ()=>{
+  ensureAudioCtx();
+  setAudioEnabled(!audioEnabled);
+});
+document.getElementById('soundToggle').addEventListener('keydown', (e)=>{
+  if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); document.getElementById('soundToggle').click(); }
+});
+
 function setView(v){
   document.body.dataset.view = v;
   window.scrollTo(0,0);
   trackPageView(v);
+  if(v === 'deck'){ if(audioEnabled) startBgm(); }
+  else { stopBgm(); }
 }
 
-document.getElementById('splashScreen').addEventListener('click', ()=> setView('title'));
+document.getElementById('splashScreen').addEventListener('click', ()=>{ ensureAudioCtx(); setView('title'); });
 
 function shuffle(arr){
   const a = arr.slice();
@@ -1311,6 +1438,7 @@ function answer(item, picked, btn, choicesWrap){
   item.everAnswered = true;
   item.correct = (picked === item.reading);
   if(!item.correct){ item.triedWrong = true; }
+  if(item.correct){ playCorrectSound(); } else { playWrongSound(); }
   recordHistory(item);
   [...choicesWrap.children].forEach(b=>{
     b.disabled = true;
@@ -1327,6 +1455,7 @@ function timeoutAnswer(item, choicesWrap){
   item.everAnswered = true;
   item.correct = false;
   item.triedWrong = true;
+  playWrongSound();
   recordHistory(item);
   [...choicesWrap.children].forEach(b=>{
     b.disabled = true;

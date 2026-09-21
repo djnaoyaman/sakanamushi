@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>さかなむし | 魚へん・虫へん漢字クイズ</title>
+<meta name="description" content="「鮪」「蟹」「鰯」「蝶」など、魚へん・虫へんの難読漢字を無料で学べるクイズサイト「さかなむし」。読み方一覧（図鑑）とクイズモードで、寿司屋や食事の場で役立つ漢字力が身につきます。">
+<meta name="keywords" content="魚へん,虫へん,漢字クイズ,難読漢字,魚へんの漢字,寿司,漢字読み方,さかなむし">
+<meta name="author" content="sakanamushi">
+<link rel="canonical" href="https://djnaoyaman.github.io/sakanamushi/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Open Graph / Facebook / LINE / Discord -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://djnaoyaman.github.io/sakanamushi/">
+<meta property="og:title" content="さかなむし | 魚へん・虫へん漢字クイズ">
+<meta property="og:description" content="「鮪」「蟹」「鰯」「蝶」など、魚へん・虫へんの難読漢字を無料で学べるクイズサイト。読み方一覧（図鑑）とクイズモードで漢字力アップ！">
+<meta property="og:image" content="https://djnaoyaman.github.io/sakanamushi/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="さかなむし">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="さかなむし | 魚へん・虫へん漢字クイズ">
+<meta name="twitter:description" content="「鮪」「蟹」「鰯」「蝶」など、魚へん・虫へんの難読漢字を無料で学べるクイズサイト。読み方一覧（図鑑）とクイズモードで漢字力アップ！">
+<meta name="twitter:image" content="https://djnaoyaman.github.io/sakanamushi/assets/og-image.png">
+
+<!-- JSON-LD structured data (SEO / LLMO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "さかなむし",
+  "alternateName": "魚へん・虫へん漢字クイズ",
+  "url": "https://djnaoyaman.github.io/sakanamushi/",
+  "description": "魚へん・虫へんの難読漢字を学べる無料クイズサイト。読み方一覧（図鑑）とクイズモードを提供。",
+  "inLanguage": "ja",
+  "publisher": {
+    "@type": "Organization",
+    "name": "さかなむし"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "「鮪」の読み方は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "「まぐろ」と読みます。魚へんに「有」と書く漢字で、マグロを表します。" }
+    },
+    {
+      "@type": "Question",
+      "name": "「蟹」はなぜ虫へんなのですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "漢字の部首「虫（むしへん）」は昆虫だけでなく、蟹・蛸・蛙など小さな生き物全般を表す部首として使われてきました。そのため「蟹（かに）」も虫へんの漢字に分類されます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "「鰯」の読み方と意味は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "「いわし」と読みます。魚へんに「弱」と書き、傷みやすく弱い魚であることに由来すると言われています。" }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>🐟 さかなむし 🐛</h1>
+  <p class="tagline">魚へん・虫へん、難読漢字クイズ</p>
+</header>
+
+<nav class="mode-nav" aria-label="モード選択">
+  <button class="mode-btn active" data-mode="quiz">📝 クイズに挑戦</button>
+  <button class="mode-btn" data-mode="zukan">📖 漢字図鑑を見る</button>
+</nav>
+
+<main>
+
+  <!-- ============ QUIZ SECTION ============ -->
+  <section id="quiz-section" class="panel active">
+
+    <div id="quiz-start" class="card">
+      <h2>出題する部首を選んでね</h2>
+      <div class="category-select">
+        <button class="cat-btn" data-cat="fish">🐟 魚へん</button>
+        <button class="cat-btn" data-cat="mushi">🐛 虫へん</button>
+        <button class="cat-btn" data-cat="all">🎲 ミックス</button>
+      </div>
+      <p class="hint">全部で <span id="total-count">0</span> 問。四択クイズで漢字の読み方に挑戦しよう！</p>
+    </div>
+
+    <div id="quiz-play" class="card hidden">
+      <div class="progress-row">
+        <span id="progress-label">問題 1 / 10</span>
+        <span id="score-label">正解 0</span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+
+      <div class="question-box">
+        <p class="question-lead">この漢字の読み方は？</p>
+        <p id="question-kanji" class="kanji-display">鮪</p>
+      </div>
+
+      <div id="choices" class="choices-grid"></div>
+
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button id="next-btn" class="primary-btn hidden">次の問題へ →</button>
+    </div>
+
+    <div id="quiz-result" class="card hidden">
+      <h2>結果発表！</h2>
+      <p id="result-score" class="result-score">10問中 8問 正解！</p>
+      <p id="result-comment" class="result-comment"></p>
+      <div class="result-actions">
+        <button id="retry-btn" class="primary-btn">もう一度挑戦</button>
+        <a id="share-btn" class="share-btn" target="_blank" rel="noopener">𝕏 結果をシェアする</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ ZUKAN (encyclopedia) SECTION ============ -->
+  <!-- Always-static, crawlable content for SEO / LLMO: full kanji list with readings -->
+  <section id="zukan-section" class="panel">
+    <h2>魚へん漢字 一覧</h2>
+    <p class="section-desc">寿司屋や魚屋でよく見かける、魚へんの難読漢字とその読み方です。</p>
+    <table class="kanji-table" id="fish-table">
+      <thead><tr><th>漢字</th><th>読み方</th><th>意味</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>虫へん漢字 一覧</h2>
+    <p class="section-desc">虫へんは昆虫だけでなく、蟹や蛸など小さな生き物にも使われる部首です。</p>
+    <table class="kanji-table" id="mushi-table">
+      <thead><tr><th>漢字</th><th>読み方</th><th>意味</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="about-section">
+    <h2>「さかなむし」について</h2>
+    <p>
+      「さかなむし」は、<strong>魚へん</strong>と<strong>虫へん</strong>の難読漢字を楽しく学べる無料のクイズサイトです。
+      「鮪（まぐろ）」「鰯（いわし）」といった魚へんの漢字から、「蟹（かに）」「蝶（ちょう）」といった虫へんの漢字まで、
+      クイズ形式と一覧（図鑑）形式の両方で学習できます。寿司屋の湯のみや魚屋の看板で見かける漢字の意味がわかるようになります。
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> さかなむし — 魚へん・虫へん漢字クイズ</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

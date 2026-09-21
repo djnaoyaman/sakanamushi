@@ -1,164 +1,1365 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>さかなむし | 魚へん・虫へん漢字クイズ</title>
-<meta name="description" content="「鮪」「蟹」「鰯」「蝶」など、魚へん・虫へんの難読漢字を無料で学べるクイズサイト「さかなむし」。読み方一覧（図鑑）とクイズモードで、寿司屋や食事の場で役立つ漢字力が身につきます。">
-<meta name="keywords" content="魚へん,虫へん,漢字クイズ,難読漢字,魚へんの漢字,寿司,漢字読み方,さかなむし">
-<meta name="author" content="sakanamushi">
-<link rel="canonical" href="https://djnaoyaman.github.io/sakanamushi/">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K6SPCN20DE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<!-- Open Graph / Facebook / LINE / Discord -->
+  gtag('config', 'G-K6SPCN20DE');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>うおへん・むしへん図鑑｜魚偏と虫偏、おなじ「へん」でもなかまはまるでちがう</title>
+<meta name="description" content="魚偏はかわいくて美味しそうなもの、虫偏は気持ち悪くてゲーッとなるもの。一字ずつ大きく読み解く、小学生にもわかる漢字クイズ図鑑。魚へん・虫へん260字以上を収録。">
+<link rel="canonical" href="https://djnaoyaman.github.io/sakanamushi/">
+<meta name="keywords" content="魚偏,虫偏,漢字,漢字クイズ,魚へん,虫へん,難読漢字,漢字図鑑,子供向け,一見坊,宮崎直哉">
+<meta name="robots" content="index,follow">
+<meta name="author" content="一見坊（宮崎直哉）">
+
+<!-- Favicon / Apple Touch Icon -->
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAD1UlEQVR4nO1Wa0xbZRh+DpwALVKCsHSBQ0cpHUwiEGfcL4dcC7REF5MJ4saKM0MKdOMyNp1Oo3HDMMcYZWzKQNgSJC7eAC9xNzMdc1yWuYKl2FK0tCSlp9YczhrS4I8utVQ2C8K/PTk/vjff9z7Pezl58xIsQ2MtQQIQxyeuEbtWoybdp1Vnd8Xtt+q8Xngo8J8g3SeWvSvJlQqio2XSvIKC7cti6ew6Pzo2tlEsLpEXe139k8FXvb0mk/kP43R+vhTA4OBQsXz37KzVFwGNZvzChc+4HM59M5ifnz995iOSJGXS3LPtHwP4pOfTmZmZN996u7mpkSCIZSUEwOl0LhLo7Do/NfX7wQP7XTlaLLOqlta83JxjDfUEQTAMExwc7On/wfET69fztz33LGepqNXq0b37ahYJNJ1UxcYKXyoqdJmff/FlueJVRVkpQRC9ff0NxxrbPmwViWLdFHr95KnWMzdvDonFcQBGR8cAXLn6g5WmAdy+/cukwQDAbv+LdDgcABwOh06nP97YxOVydTp9b1//pk0JCwsLAK5d+9FoNB564/C5rg5/f3/PSHMk2RJJFgCjcfqOWv1M6lbX39Hd3XPx0mUAPF4IWf9+AwCKijIYpl4ukUdEhH9/8ZJLoKK8DMDc3NzwyK3MzAwvdh/hV7e/ZgVuvoMMDAx0G21n210lAjA29uvJ5hYAw8Mj/0vA03hAiZZ0/ubb737T6bBUk5cW8B18Pj9Hkl1dpaQoCv9q8vDIrS1bnnrvSL23gKtEACorFAA8SxQayvN8eej1A/fTNptnQnk8+a6diwSEMTF7KysSEuJjYjaQJDk9bXI47gqFQgBRUVGvHaxLTk7yMbl16yIU5ZUCgcBl3ptFVpqWyfK0ExMFL+5gGCY8/NFdJa9U19SxLJuSnLSjWK6oUFoss24Wp9PJsqzNZjOZzPrJSdufNk+N2trqvv6vAdA0DYNeQ1GR6WmpLENPjN+hqMja2n0sQ7e3naaoyHJFKcvQLaoTrjc2q5ll6NI9uykq0utLSXm8RL6z/ui7Pd3nRtUjR4+8Q1GRSqWC3Pb8CwA2P/kEgEdCQgAMXL8BIC0tFYdx+cpVAIUF21UtreNa7cCNn1O3Pp2VlfHT9YGE+I0iUaxIFCuOixOL48LCwjyTkEnzmlWnhgaHSbvdDqCsdA+AYC43MfExSXYWAD6fn58v3SAQAAgKCioqKuzo6BQIogFkpKdlZqQHBAQ8oBOuwVVVpSSsFlNSymZftgqn07msaSGOT9Rq1H4cTpCPDiucRSvweSiwurg3KtZu/yXWen3/G3K/kfn4w7dwAAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABqUlEQVR4nGP8/vU9AymAhYGBQVVdm0jVt29eZYGzCKqGmMsE4Tx9+vT79x9Y1f39+xfdSQwMDBFRsaEhwaIiIoaGBhoa6sgq+idMEhAQSElOhHChNoQEB+XmZN24eYuDk+P8+QsQwSVLl1+4cPHly1dv3rw5e+48xDama9euMzAw/Pr1q6e3/8uXL1evXispq/j37x8DA8O0aTO0tDTFxcVkZGSUlRQZGBgYGRlZpGWkGRgYmJiYICQzMzM/Hx+EiwmYmJhY+Pn4GBgY5ORkGRgY/v//r6WpCZfm5ua+cOHi8+cvfv36denyFRRPf/v2TUdHR1hI+Oq1a25urhDBHds3MzMzHzp8REJCQkxUFGrJjx8/GBgYRERE3r55e+ToURFh4TNnzl6+cvXXr18fPnx8+uzZ+/cf7ty5e+PmTQYGhlevXrH09E5gYGBQkJdfs3adu7vb6dNnoqMi16xZ5+7m0ts3QVVNVVVFRV1NTUtLg4GB4eix44wf3r3Q0TNCi+lfv36xsbGh+VhVXfvGtUtM7OzsmKGBqRoCmJmZWeC6sarABIykJm8A+SuefM0FF5UAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<meta name="theme-color" content="#1c1c1a">
+<meta name="msapplication-TileColor" content="#f7f5ef">
+
+<!-- Open Graph / SNS対策 -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="うおへん・むしへん図鑑">
+<meta property="og:title" content="うおへん・むしへん図鑑｜おなじ「へん」でもなかまはまるでちがう">
+<meta property="og:description" content="魚偏はかわいくて美味しそうなもの、虫偏は気持ち悪くてゲーッとなるもの。一字ずつ大きく読み解く漢字クイズ図鑑。">
+<meta property="og:locale" content="ja_JP">
 <meta property="og:url" content="https://djnaoyaman.github.io/sakanamushi/">
-<meta property="og:title" content="さかなむし | 魚へん・虫へん漢字クイズ">
-<meta property="og:description" content="「鮪」「蟹」「鰯」「蝶」など、魚へん・虫へんの難読漢字を無料で学べるクイズサイト。読み方一覧（図鑑）とクイズモードで漢字力アップ！">
-<meta property="og:image" content="https://djnaoyaman.github.io/sakanamushi/assets/og-image.png">
+<meta property="og:image" content="https://djnaoyaman.github.io/sakanamushi/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="さかなむし">
+<meta property="og:image:alt" content="うおへん・むしへん図鑑｜おなじ「へん」でもなかまはまるでちがう">
 
-<!-- Twitter / X Card -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="さかなむし | 魚へん・虫へん漢字クイズ">
-<meta name="twitter:description" content="「鮪」「蟹」「鰯」「蝶」など、魚へん・虫へんの難読漢字を無料で学べるクイズサイト。読み方一覧（図鑑）とクイズモードで漢字力アップ！">
-<meta name="twitter:image" content="https://djnaoyaman.github.io/sakanamushi/assets/og-image.png">
+<meta name="twitter:title" content="うおへん・むしへん図鑑｜おなじ「へん」でもなかまはまるでちがう">
+<meta name="twitter:description" content="魚偏はかわいくて美味しそうなもの、虫偏は気持ち悪くてゲーッとなるもの。一字ずつ大きく読み解く漢字クイズ図鑑。">
+<meta name="twitter:image" content="https://djnaoyaman.github.io/sakanamushi/og-image.png">
 
-<!-- JSON-LD structured data (SEO / LLMO) -->
+<!-- LLMO: 構造化データ（AIの引用・要約に対応） -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "さかなむし",
-  "alternateName": "魚へん・虫へん漢字クイズ",
+  "@type": "LearningResource",
+  "name": "うおへん・むしへん図鑑",
   "url": "https://djnaoyaman.github.io/sakanamushi/",
-  "description": "魚へん・虫へんの難読漢字を学べる無料クイズサイト。読み方一覧（図鑑）とクイズモードを提供。",
+  "description": "魚偏と虫偏の漢字を一字ずつ大きく読み解く、子供向けの漢字クイズ図鑑。魚偏はかわいくて美味しそうなもの、虫偏は気持ち悪くてゲーッとなるものという2大比較軸で構成。",
   "inLanguage": "ja",
-  "publisher": {
-    "@type": "Organization",
-    "name": "さかなむし"
+  "learningResourceType": "クイズ",
+  "educationalUse": "自習",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "一見坊（宮崎直哉）",
+    "alternateName": "犬井静",
+    "sameAs": [
+      "https://djnaoyaman.github.io/ppp/about.html",
+      "https://djnaoyaman.github.io/youkai/index.html"
+    ]
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "「鮪」の読み方は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "「まぐろ」と読みます。魚へんに「有」と書く漢字で、マグロを表します。" }
-    },
-    {
-      "@type": "Question",
-      "name": "「蟹」はなぜ虫へんなのですか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "漢字の部首「虫（むしへん）」は昆虫だけでなく、蟹・蛸・蛙など小さな生き物全般を表す部首として使われてきました。そのため「蟹（かに）」も虫へんの漢字に分類されます。" }
-    },
-    {
-      "@type": "Question",
-      "name": "「鰯」の読み方と意味は？",
-      "acceptedAnswer": { "@type": "Answer", "text": "「いわし」と読みます。魚へんに「弱」と書き、傷みやすく弱い魚であることに由来すると言われています。" }
-    }
-  ]
-}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1c1a;
+    --paper:#f7f5ef;
+    --paper2:#ffffff;
+    --line:#1c1c1a;
+    --gray:#8c887e;
+    --gray-light:#d8d4c8;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    font-family:'Shippori Mincho','Hiragino Mincho ProN','Yu Mincho',serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.9;
+    letter-spacing:.02em;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;}
 
-<link rel="stylesheet" href="css/style.css">
+  .screen{
+    display:none;
+    min-height:100vh;
+    min-height:100dvh;
+    width:100%;
+  }
+  body[data-view="splash"] .screen-splash{display:flex;}
+  body[data-view="title"] .screen-title{display:flex;}
+  body[data-view="author"] .screen-author{display:flex;}
+  body[data-view="history"] .screen-history{display:flex;}
+  body[data-view="deck"] .screen-deck{display:flex;}
+  body[data-view="mistakes"] .screen-mistakes{display:flex;}
+  body[data-view="complete"] .screen-complete{display:flex;}
+
+  /* ---------------- SPLASH ---------------- */
+  .screen-splash{
+    background:var(--ink);
+    color:var(--paper);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    cursor:pointer;
+    gap:22px;
+    padding:20px;
+  }
+  .splash-produce{
+    font-size:.78rem;
+    letter-spacing:.35em;
+    text-transform:uppercase;
+    opacity:.75;
+  }
+  .splash-rule{width:40px;height:1px;background:var(--paper);opacity:.5;}
+  .splash-credit{
+    font-size:clamp(1.05rem,3.4vw,1.5rem);
+    font-weight:600;
+    letter-spacing:.06em;
+  }
+  .splash-hint{
+    margin-top:30px;
+    font-size:.72rem;
+    opacity:.55;
+    letter-spacing:.1em;
+  }
+
+  /* ---------------- TITLE ---------------- */
+  .screen-title{
+    flex-direction:column;
+    position:relative;
+    padding:0;
+  }
+  .title-page{
+    min-height:100vh;
+    min-height:100dvh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:60px 24px;
+    gap:10px;
+    position:relative;
+  }
+  .site-header{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:flex-end;
+    padding:22px 24px;
+  }
+  .site-header-link{
+    font-size:.82rem;
+    letter-spacing:.15em;
+    text-decoration:underline;
+    text-underline-offset:4px;
+    cursor:pointer;
+    color:var(--gray);
+  }
+  .title-eyebrow{font-size:.72rem;letter-spacing:.3em;color:var(--gray);margin-bottom:6px;}
+  .title-main{
+    font-size:clamp(1.7rem,6vw,2.6rem);
+    font-weight:700;
+    margin:0 0 6px;
+    letter-spacing:.05em;
+  }
+  .title-sub{
+    max-width:480px;
+    text-align:center;
+    font-size:.92rem;
+    color:#4a473f;
+    margin:0 0 40px;
+  }
+  .radical-picker{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    width:100%;
+    max-width:760px;
+    border-top:1px solid var(--line);
+  }
+  .radical-row{
+    display:flex;
+  }
+  .radical-card{
+    flex:1;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    padding:32px 16px 30px;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+    background:transparent;
+    min-height:280px;
+    overflow:hidden;
+    text-align:center;
+  }
+  .radical-row .radical-card{border-right:1px solid var(--line);}
+  .radical-row .radical-card:last-child{border-right:none;}
+  .radical-card.advanced{min-height:150px;}
+  .radical-card .kanji-big.adv{font-size:clamp(1.8rem,5.5vw,3rem);}
+  .radical-card .kanji-big{
+    font-size:clamp(3rem,9vw,5rem);
+    font-weight:700;
+    margin-bottom:14px;
+    position:relative;
+    z-index:2;
+  }
+  .radical-card .label{
+    font-size:.86rem;
+    letter-spacing:.08em;
+    position:relative;
+    z-index:2;
+  }
+  .radical-card .count{
+    font-size:.7rem;
+    color:var(--gray);
+    margin-top:4px;
+    position:relative;
+    z-index:2;
+  }
+  .radical-card:hover{background:var(--ink);color:var(--paper);}
+  .radical-card:hover .count{color:var(--gray-light);}
+
+  footer.site-footer{
+    max-width:760px;
+    margin:0 auto;
+    padding:30px 20px 10px;
+    text-align:center;
+    font-size:.76rem;
+    color:#4a473f;
+  }
+  .title-author-link{
+    margin-top:6px;
+    font-size:.82rem;
+    letter-spacing:.15em;
+    text-decoration:underline;
+    text-underline-offset:4px;
+    cursor:pointer;
+    color:var(--gray);
+  }
+
+  /* ---------------- AUTHOR ---------------- */
+  .screen-author{
+    flex-direction:column;
+    align-items:center;
+    padding:70px 24px 80px;
+    text-align:center;
+    gap:34px;
+  }
+  .author-eyebrow{font-size:.72rem;letter-spacing:.3em;color:var(--gray);}
+  .screen-history{
+    flex-direction:column;
+    align-items:center;
+    padding:70px 24px 80px;
+    text-align:center;
+    gap:24px;
+  }
+  .history-body{max-width:600px;width:100%;text-align:left;}
+  .history-empty{font-size:.9rem;color:var(--gray);text-align:center;padding:40px 0;}
+  .history-summary{
+    font-size:.82rem;
+    color:var(--gray);
+    letter-spacing:.05em;
+    padding-bottom:14px;
+    margin:0 0 6px;
+    border-bottom:1px solid var(--line);
+  }
+  .history-log{display:flex;flex-direction:column;}
+  .history-row{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding:9px 0;
+    border-bottom:1px solid var(--gray-light);
+    font-size:.9rem;
+  }
+  .history-row .h-radical{font-size:.68rem;letter-spacing:.05em;color:var(--gray);min-width:3.4em;white-space:nowrap;}
+  .history-row .h-kanji{font-size:1.2rem;font-weight:700;min-width:1.6em;}
+  .history-row .h-reading{color:#4a473f;flex:1;}
+  .history-row .h-status{font-size:.74rem;letter-spacing:.05em;color:var(--gray);white-space:nowrap;}
+  .history-row .h-status.status-mastered{color:var(--ink);font-weight:700;}
+  .history-row .h-status.status-trying{color:var(--ink);text-decoration:underline;text-underline-offset:3px;}
+  .author-profile{
+    max-width:600px;
+    width:100%;
+    text-align:left;
+    margin-top:10px;
+  }
+  .author-profile p{font-size:.9rem;color:#3c392f;margin:0 0 1.6em;}
+  .author-profile h2{
+    font-size:1.15rem;
+    font-weight:700;
+    letter-spacing:.05em;
+    margin:0 0 1em;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+  }
+  .author-profile h3{
+    font-size:.82rem;
+    font-weight:700;
+    letter-spacing:.15em;
+    color:var(--gray);
+    margin:2.2em 0 .9em;
+  }
+  .author-profile ul{
+    list-style:none;
+    margin:0 0 1.2em;
+    padding:0;
+  }
+  .author-profile ul li{
+    font-size:.88rem;
+    color:#3c392f;
+    padding:10px 0;
+    border-bottom:1px solid var(--gray-light);
+  }
+  .author-profile ul li .brand-desc{display:block;font-size:.78rem;color:var(--gray);margin-top:3px;}
+  .author-profile a{text-decoration:underline;text-underline-offset:3px;}
+  .author-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    justify-content:center;
+    align-items:stretch;
+  }
+  .author-kanji-link{
+    text-decoration:none;
+    color:var(--ink);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    width:240px;
+    padding:32px 20px 26px;
+    border:1px solid var(--gray-light);
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .author-kanji-link:hover{border-color:var(--ink);transform:translateY(-2px);}
+  .author-kanji-link .k{
+    font-size:clamp(3.6rem,13vw,6rem);
+    font-weight:700;
+    line-height:1;
+  }
+  .author-kanji-link .work-title{font-size:.82rem;font-weight:700;letter-spacing:.04em;color:var(--ink);}
+  .author-kanji-link .work-title::after{content:" →";}
+  .author-kanji-link .sub-label{font-size:.72rem;letter-spacing:.03em;color:var(--gray);max-width:200px;line-height:1.75;}
+  .author-bio{max-width:520px;font-size:.88rem;color:#3c392f;text-align:left;}
+  .author-back{
+    font-size:.85rem;
+    letter-spacing:.1em;
+    text-decoration:underline;
+    text-underline-offset:4px;
+    cursor:pointer;
+    color:var(--gray);
+  }
+
+  /* ---------------- DECK ---------------- */
+  .screen-deck{
+    flex-direction:column;
+    padding:22px 20px 40px;
+    position:relative;
+  }
+  .deck-header{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:6px 14px;
+    font-size:.74rem;
+    letter-spacing:.08em;
+    color:var(--gray);
+    max-width:640px;
+    margin:0 auto 0;
+    width:100%;
+  }
+  .deck-header .back-link{cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
+  .mistake-indicator{cursor:pointer;text-decoration:underline;text-underline-offset:3px;color:var(--ink);display:none;}
+  .timer-display{font-weight:700;color:var(--ink);text-align:center;font-size:1.3rem;margin-top:14px;height:1.6em;letter-spacing:.05em;}
+  .timer-display.urgent{color:#a12a2a;font-size:1.5rem;}
+  .deck-body{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    max-width:820px;
+    margin:0 auto;
+    width:100%;
+    padding:20px 0;
+  }
+  .deck-card{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    transition:transform .35s ease, opacity .35s ease;
+  }
+  .deck-card.slide-out{transform:translateX(-36px);opacity:0;}
+  .deck-card.slide-in{transform:translateX(36px);opacity:0;}
+  .deck-row-main{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    align-items:center;
+    gap:28px;
+  }
+  .deck-kanji{
+    font-size:clamp(6rem,28vw,15rem);
+    font-weight:700;
+    line-height:1;
+    text-align:center;
+  }
+  .choice-col{display:flex;flex-direction:column;justify-content:center;}
+  .deck-question{font-size:clamp(1.1rem,3vw,1.5rem);font-weight:700;color:var(--ink);letter-spacing:.1em;text-align:center;margin-bottom:10px;}
+  .choice-list{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    width:100%;
+    border-top:1px solid var(--gray-light);
+  }
+  .choice-btn{
+    background:none;
+    border:none;
+    border-bottom:1px solid var(--gray-light);
+    padding:14px 6px;
+    font-size:1.05rem;
+    cursor:pointer;
+    color:var(--ink);
+    letter-spacing:.05em;
+    text-align:left;
+  }
+  .choice-btn:hover{background:rgba(0,0,0,.04);}
+  .choice-btn.right{font-weight:700;}
+  .choice-btn.right::after{content:" ○";}
+  .choice-btn.wrong::after{content:" ×";}
+  .choice-btn[disabled]{cursor:default;}
+  .choice-btn.dim{color:var(--gray);}
+
+  .deck-row-reveal{
+    min-height:108px;
+    border-top:1px solid var(--gray-light);
+    padding-top:18px;
+    text-align:center;
+  }
+  .reveal-panel{display:none;flex-direction:column;gap:10px;align-items:center;}
+  .reveal-panel.show{display:flex;}
+  .reveal-yomi{font-size:1.5rem;font-weight:700;}
+  .reveal-meaning{font-size:.9rem;color:#3c392f;max-width:480px;}
+  .reveal-meaning rt{font-size:.55em;color:var(--gray);letter-spacing:0;}
+  .author-profile rt, .history-row rt{font-size:.6em;color:var(--gray);}
+  .reveal-result{font-size:.72rem;letter-spacing:.2em;color:var(--gray);}
+
+  .deck-nav{
+    display:flex;
+    justify-content:center;
+    padding-top:14px;
+  }
+  .nav-link{
+    font-size:.82rem;
+    letter-spacing:.1em;
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:4px;
+    color:var(--gray);
+  }
+  .nav-link.disabled{opacity:.3;pointer-events:none;text-decoration:none;}
+
+  @media (max-width:640px){
+    .deck-row-main{grid-template-columns:1fr;gap:16px;}
+    .deck-kanji{font-size:clamp(5rem,30vw,8rem);}
+  }
+
+  /* ---------------- MISTAKES / COMPLETE ---------------- */
+  .screen-mistakes,.screen-complete{
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:60px 24px;
+    text-align:center;
+    gap:24px;
+  }
+  .mistakes-title,.complete-title{
+    font-size:clamp(1.2rem,4vw,1.6rem);
+    font-weight:700;
+  }
+  .mistakes-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+    max-width:420px;
+    width:100%;
+    border-top:1px solid var(--gray-light);
+  }
+  .mistakes-list li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 4px;
+    border-bottom:1px solid var(--gray-light);
+    font-size:1rem;
+  }
+  .mistakes-list li .m-kanji{font-size:1.4rem;}
+  .mistakes-list li .m-retry{font-size:.78rem;text-decoration:underline;cursor:pointer;color:var(--gray);}
+  .big-action{
+    margin-top:10px;
+    font-size:.92rem;
+    letter-spacing:.08em;
+    text-decoration:underline;
+    text-underline-offset:4px;
+    cursor:pointer;
+  }
+
+  @media (max-width:640px){
+    .radical-row{flex-direction:column;}
+    .radical-row .radical-card{border-right:none;}
+    .radical-card{min-height:200px;padding:26px 16px 24px;}
+  }
+</style>
 </head>
-<body>
+<body data-view="splash">
 
-<header class="site-header">
-  <h1>🐟 さかなむし 🐛</h1>
-  <p class="tagline">魚へん・虫へん、難読漢字クイズ</p>
-</header>
+<div class="screen screen-splash" id="splashScreen">
+  <div class="splash-produce">Produce</div>
+  <div class="splash-rule"></div>
+  <div class="splash-credit">紫波金魚</div>
+  <div class="splash-credit">一見坊の【日本妖怪学体系】</div>
+  <div class="splash-hint">タップして はじめる</div>
+</div>
 
-<nav class="mode-nav" aria-label="モード選択">
-  <button class="mode-btn active" data-mode="quiz">📝 クイズに挑戦</button>
-  <button class="mode-btn" data-mode="zukan">📖 漢字図鑑を見る</button>
-</nav>
-
-<main>
-
-  <!-- ============ QUIZ SECTION ============ -->
-  <section id="quiz-section" class="panel active">
-
-    <div id="quiz-start" class="card">
-      <h2>出題する部首を選んでね</h2>
-      <div class="category-select">
-        <button class="cat-btn" data-cat="fish">🐟 魚へん</button>
-        <button class="cat-btn" data-cat="mushi">🐛 虫へん</button>
-        <button class="cat-btn" data-cat="all">🎲 ミックス</button>
-      </div>
-      <p class="hint">全部で <span id="total-count">0</span> 問。四択クイズで漢字の読み方に挑戦しよう！</p>
+<div class="screen screen-title">
+  <div class="title-page title-page-1">
+    <div class="site-header">
+      <span class="site-header-link" id="openHistoryTitle">履歴</span>
     </div>
-
-    <div id="quiz-play" class="card hidden">
-      <div class="progress-row">
-        <span id="progress-label">問題 1 / 10</span>
-        <span id="score-label">正解 0</span>
+    <div class="title-eyebrow">A KANJI FIELD GUIDE</div>
+    <h1 class="title-main">うおへん・むしへん</h1>
+    <p class="title-sub">おなじ「へん」でも、なかまはまるでちがう。</p>
+    <div class="radical-picker">
+      <div class="radical-row">
+        <div class="radical-card uo" id="pickUo">
+          <div class="kanji-big">魚</div>
+          <div class="label">なんかおいしそう？</div>
+          <div class="count"><span id="uoCount">0</span>字</div>
+        </div>
+        <div class="radical-card mushi" id="pickMushi">
+          <div class="kanji-big">虫</div>
+          <div class="label">なんかきもちわるい？</div>
+          <div class="count"><span id="mushiCount">0</span>字</div>
+        </div>
       </div>
-      <div class="progress-bar"><div id="progress-fill"></div></div>
-
-      <div class="question-box">
-        <p class="question-lead">この漢字の読み方は？</p>
-        <p id="question-kanji" class="kanji-display">鮪</p>
-      </div>
-
-      <div id="choices" class="choices-grid"></div>
-
-      <p id="feedback" class="feedback" aria-live="polite"></p>
-      <button id="next-btn" class="primary-btn hidden">次の問題へ →</button>
-    </div>
-
-    <div id="quiz-result" class="card hidden">
-      <h2>結果発表！</h2>
-      <p id="result-score" class="result-score">10問中 8問 正解！</p>
-      <p id="result-comment" class="result-comment"></p>
-      <div class="result-actions">
-        <button id="retry-btn" class="primary-btn">もう一度挑戦</button>
-        <a id="share-btn" class="share-btn" target="_blank" rel="noopener">𝕏 結果をシェアする</a>
+      <div class="radical-card advanced" id="pickAdvanced">
+        <div class="kanji-big adv">上級</div>
+        <div class="label">もっとむずかしい？</div>
+        <div class="count"><span id="advancedCount">0</span>字</div>
       </div>
     </div>
+  </div>
+  <div class="title-page title-page-author">
+    <div class="title-author-link" id="openAuthor">作者</div>
+  </div>
+</div>
 
-  </section>
+<div class="screen screen-author">
+  <div class="author-eyebrow">AUTHOR</div>
+  <div class="author-profile">
+    <p>自分のプロフィールを聞かれることが増えたので、いつも使っているものをここにも置いておく。</p>
+    <p>note.comを主な発表媒体にしているエッセイスト・コンテンツクリエイターで、DJ（djnaoyaman）、マーケター、ブランディングプロデューサーでもある。妖怪関連の活動（この台帳を含む）では「一見坊」という筆名を使っている。</p>
 
-  <!-- ============ ZUKAN (encyclopedia) SECTION ============ -->
-  <!-- Always-static, crawlable content for SEO / LLMO: full kanji list with readings -->
-  <section id="zukan-section" class="panel">
-    <h2>魚へん漢字 一覧</h2>
-    <p class="section-desc">寿司屋や魚屋でよく見かける、魚へんの難読漢字とその読み方です。</p>
-    <table class="kanji-table" id="fish-table">
-      <thead><tr><th>漢字</th><th>読み方</th><th>意味</th></tr></thead>
-      <tbody></tbody>
-    </table>
+    <h2>宮崎直哉（本名）</h2>
 
-    <h2>虫へん漢字 一覧</h2>
-    <p class="section-desc">虫へんは昆虫だけでなく、蟹や蛸など小さな生き物にも使われる部首です。</p>
-    <table class="kanji-table" id="mushi-table">
-      <thead><tr><th>漢字</th><th>読み方</th><th>意味</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </section>
+    <h3>学歴</h3>
+    <ul>
+      <li>足立区立梅島小学校 卒業</li>
+      <li>足立区立第四中学校 卒業</li>
+      <li>明治学院高校 卒業</li>
+      <li>青山学院大学 文学部 教育学科 中退</li>
+      <li>明治大学 商学部 商学科 卒業</li>
+    </ul>
 
-  <section class="about-section">
-    <h2>「さかなむし」について</h2>
-    <p>
-      「さかなむし」は、<strong>魚へん</strong>と<strong>虫へん</strong>の難読漢字を楽しく学べる無料のクイズサイトです。
-      「鮪（まぐろ）」「鰯（いわし）」といった魚へんの漢字から、「蟹（かに）」「蝶（ちょう）」といった虫へんの漢字まで、
-      クイズ形式と一覧（図鑑）形式の両方で学習できます。寿司屋の湯のみや魚屋の看板で見かける漢字の意味がわかるようになります。
-    </p>
-  </section>
+    <h3>経歴</h3>
+    <ul>
+      <li>みずほ情報総研株式会社（ロンドン・ニューヨーク向け大規模決済処理システム構築、ビジネスコンサルタント）</li>
+      <li>株式会社サイバーエージェント（インターネット広告代理事業部 マネジメント）</li>
+      <li>株式会社リッツ・インターナショナル 取締役（美容サービス事業およびクリニック経営を担当）</li>
+      <li>株式会社フライング・ブレイン 代表取締役（上流マーケティング企画会社として、アパレル・ウェルネスを中心に50以上のブランドの上流マーケティング・ブランディングを担当。高名なウェルネスブランドのブランドマネージャー、マーケティング責任者を歴任）</li>
+      <li>紫波金魚 代表</li>
+      <li>あづまねエリアブランディングプロデューサー（岩手県紫波郡紫波町、2024年〜）</li>
+    </ul>
 
-</main>
+    <h3>過去に関わったブランド</h3>
+    <ul>
+      <li>バロックジャパンリミテッド（MOUSSY・SLYなど複数ブランドを展開するアパレル企業）</li>
+      <li>ウォルト・ディズニー（世界的エンターテインメント企業）</li>
+      <li>ZOZOTOWN（日本最大級のファッションECサイト）</li>
+      <li>Coca-Cola（世界的飲料ブランド）</li>
+      <li>MARK STYLER（複数ブランド）（MERCURYDUOなど複数のアパレルブランドを展開する企業）</li>
+      <li>英・インターナショナル（複数ブランド）（アパレル関連の複数ブランドを展開する企業）</li>
+      <li>恵山株式会社（複数ブランド）（複数ブランドを展開する企業）</li>
+    </ul>
 
-<footer class="site-footer">
-  <p>© <span id="year"></span> さかなむし — 魚へん・虫へん漢字クイズ</p>
-</footer>
+    <h3>関わっているブランド</h3>
+    <ul>
+      <li><a href="https://lypo-c.shop/collections/mineralion" target="_blank" rel="noopener">MINERALion（ミネラリオン）</a>（株式会社スピック）<span class="brand-desc">鉄をはじめとする複数のミネラルをイオン化技術で微細化した、液状のサプリメント。</span></li>
+      <li><a href="https://lypo-c.shop/" target="_blank" rel="noopener">Lypo-C（リポ・カプセル ビタミンC）</a>（株式会社スピック）<span class="brand-desc">リポソーム技術を用いたビタミンCサプリメント。</span></li>
+      <li><a href="https://yourkins.com/" target="_blank" rel="noopener">KINS（キンズ）</a>（株式会社KINS）<span class="brand-desc">「菌」をテーマにしたスキンケア・サプリメントブランド。</span></li>
+      <li><a href="https://madama-hada.jp/" target="_blank" rel="noopener">madama・hada（真珠肌）</a>（株式会社WSP）<span class="brand-desc">真珠エキスを主成分に配合したスキンケアブランド。</span></li>
+      <li><a href="https://gotonotsubaki.co.jp/" target="_blank" rel="noopener">Goto no Tsubaki（五島の椿）</a>（五島の椿株式会社）<span class="brand-desc">長崎・五島列島産の椿油を使ったヘア・スキンケアブランド。</span></li>
+      <li><a href="https://www.refa.net/" target="_blank" rel="noopener">ReFa（リファ）</a>（株式会社MTG）<span class="brand-desc">美容機器・ヘアケア用品のブランド。</span></li>
+      <li><a href="https://www.mtgec.jp/wellness/sixpad/" target="_blank" rel="noopener">SIXPAD（シックスパッド）</a>（株式会社MTG）<span class="brand-desc">EMS（電気的筋肉刺激）技術を用いたトレーニング機器ブランド。</span></li>
+    </ul>
 
-<script src="js/script.js"></script>
+    <h3>制作物・プロジェクト</h3>
+    <ul>
+      <li><a href="https://djnaoyaman.github.io/youkai/index.html" target="_blank" rel="noopener">一見坊の【日本妖怪学体系】</a><span class="brand-desc">47都道府県と全国区の日本の妖怪を、伝承・出典・信頼度つきでまとめた個人編集のデータベース。</span></li>
+      <li><a href="https://djnaoyaman.github.io/ppp/about.html" target="_blank" rel="noopener">掌蹠膿疱症.com</a><span class="brand-desc">個人の記録と公開資料をもとに整理した情報サイト。</span></li>
+      <li><a href="https://sauna-ikitai.com/saunners/12991" target="_blank" rel="noopener">湯気文吾（サウナイキタイ）</a><span class="brand-desc">ペンネーム「湯気文吾」で全国のサウナを巡り、記録を残すプロジェクト。</span></li>
+    </ul>
+
+    <h3>活動領域</h3>
+    <p>小説家、エッセイスト、マーケティング、会計、ブランディング、DJ、演劇、スパイス料理、他。</p>
+
+    <h3>講演実績</h3>
+    <p>東京工科大学、関東学院大学、神奈川大学、和光大学、専修大学、紫波町、五島市、砥部市、他。</p>
+
+    <h3>note</h3>
+    <p><a href="https://note.com/djnaoyaman" target="_blank" rel="noopener">note.comで執筆中</a>。</p>
+  </div>
+  <div class="author-back" id="backFromAuthor">タイトルへもどる</div>
+</div>
+
+<div class="screen screen-history">
+  <div class="author-eyebrow">履歴</div>
+  <p style="max-width:480px;font-size:.85rem;color:#4a473f;">挑戦した字が、新しいものから順に積み上がっていく記録。一発正解、まちがえてから克服したもの、まだ挑戦中のものがわかる。</p>
+  <div class="history-body" id="historyBody"></div>
+  <div class="author-back" id="backFromHistory">タイトルへもどる</div>
+</div>
+
+<div class="screen screen-deck">
+  <div class="deck-header">
+    <span class="back-link" id="deckBack">← もどる</span>
+    <span id="deckRadicalLabel"></span>
+    <span class="mistake-indicator" id="mistakeIndicator">まちがい <span id="mistakeCount">0</span></span>
+    <span id="deckCounter"></span>
+  </div>
+  <div class="deck-body">
+    <div class="deck-card" id="deckCard">
+      <div class="deck-question" id="deckQuestion">これ、なんて読む？</div>
+      <div class="deck-row-main">
+        <div class="deck-kanji" id="deckKanji">鮎</div>
+        <div class="choice-col">
+          <div class="choice-list" id="deckChoices"></div>
+          <div class="timer-display" id="timerDisplay"></div>
+        </div>
+      </div>
+      <div class="deck-row-reveal">
+        <div class="reveal-panel" id="deckReveal">
+          <div class="reveal-result" id="revealResult"></div>
+          <div class="reveal-yomi" id="revealYomi"></div>
+          <div class="reveal-meaning" id="revealMeaning"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="deck-nav">
+    <span class="nav-link" id="navPrev">← まえへ</span>
+  </div>
+</div>
+
+<div class="screen screen-mistakes">
+  <div class="mistakes-title">まちがいノート</div>
+  <p style="max-width:420px;font-size:.88rem;color:#4a473f;">気になる字は、もう一度読み直してみよう。</p>
+  <ul class="mistakes-list" id="mistakesList"></ul>
+  <div class="big-action" id="retryMistakesBtn">まちがいだけ もう一度</div>
+  <div class="big-action" id="backFromMistakes">タイトルへもどる</div>
+</div>
+
+<div class="screen screen-complete">
+  <div class="complete-title" id="completeTitle">ぜんぶ 読み終わりました。</div>
+  <p style="max-width:420px;font-size:.9rem;color:#4a473f;" id="completeSub"></p>
+  <div class="big-action" id="backFromComplete">タイトルへもどる</div>
+</div>
+
+<script>
+// [kanji, reading, meaning, cat('a'=animal,'s'=special)]
+const UO = [
+  ['鮎', 'あゆ', '<ruby>香り<rt>かおり</rt></ruby>高い<ruby>清流<rt>せいりゅう</rt></ruby>の魚。<ruby>塩焼き<rt>しおやき</rt></ruby>が人気。', 'a'],
+  ['鯛', 'たい', '「めでたい」の<ruby>縁起物<rt>えんぎもの</rt></ruby>。<ruby>お祝い<rt>おいわい</rt></ruby>の<ruby>席<rt>せき</rt></ruby>の<ruby>主役<rt>しゅやく</rt></ruby>。', 'a'],
+  ['鮭', 'さけ', '川で生まれ海で育つ、おにぎりの具の王様。', 'a'],
+  ['鰹', 'かつお', '初鰹で有名。たたきが人気の<ruby>回遊魚<rt>かいゆうぎょ</rt></ruby>。', 'a'],
+  ['鯖', 'さば', '<ruby>青魚<rt>あおざかな</rt></ruby>の<ruby>代表<rt>だいひょう</rt></ruby>。<ruby>味噌煮<rt>みそに</rt></ruby>や〆鯖でおなじみ。', 'a'],
+  ['鰤', 'ぶり', '<ruby>出世魚<rt>しゅっせぎょ</rt></ruby>。冬のぶり大根が<ruby>絶品<rt>ぜっぴん</rt></ruby>。', 'a'],
+  ['鮪', 'まぐろ', 'お寿司の王様。大トロで有名。', 'a'],
+  ['鱒', 'ます', '鮭の仲間。サーモンピンクの身が<ruby>特徴<rt>とくちょう</rt></ruby>。', 'a'],
+  ['鯵', 'あじ', '<ruby>干物<rt>ひもの</rt></ruby>でおなじみの小さな<ruby>青魚<rt>あおざかな</rt></ruby>。', 'a'],
+  ['鰯', 'いわし', '群れで泳ぐ小魚。<ruby>梅煮<rt>うめに</rt></ruby>や<ruby>丸干し<rt>まるぼし</rt></ruby>が人気。', 'a'],
+  ['鮒', 'ふな', '<ruby>用水路<rt>ようすいろ</rt></ruby>にもいる、鯉に似た川魚。', 'a'],
+  ['鯉', 'こい', '鯉のぼりでおなじみ。池を泳ぐ<ruby>縁起物<rt>えんぎもの</rt></ruby>。', 'a'],
+  ['鰆', 'さわら', '春を<ruby>告げる<rt>つげる</rt></ruby>魚。<ruby>西京焼き<rt>さいきょうやき</rt></ruby>が<ruby>定番<rt>ていばん</rt></ruby>。', 'a'],
+  ['鱈', 'たら', '鍋の<ruby>主役<rt>しゅやく</rt></ruby>。ふわふわの白身。', 'a'],
+  ['鰊', 'にしん', '数の子の親。<ruby>身欠き<rt>みがき</rt></ruby>にしんも人気。', 'a'],
+  ['鰕', 'えび', 'エビを表す、魚へんの珍しい字。虫へんの「蝦」と同じ意味。', 'a'],
+  ['鮫', 'さめ', '<ruby>鋭い<rt>するどい</rt></ruby>歯を持つ、海のハンター。', 'a'],
+  ['鰻', 'うなぎ', 'ぬるぬる長い体の<ruby>夜行性<rt>やこうせい</rt></ruby>魚。<ruby>蒲焼き<rt>かばやき</rt></ruby>は<ruby>絶品<rt>ぜっぴん</rt></ruby>。', 'a'],
+  ['鯰', 'なまず', '長いひげで<ruby>泥<rt>どろ</rt></ruby>の中を<ruby>探る<rt>さぐる</rt></ruby>。<ruby>地震<rt>じしん</rt></ruby>を起こす<ruby>伝説<rt>でんせつ</rt></ruby>も。', 'a'],
+  ['鰐', 'わに', '<ruby>硬い<rt>かたい</rt></ruby>うろこと<ruby>鋭い<rt>するどい</rt></ruby>歯を持つ、水辺の大型ハンター。', 'a'],
+  ['鮟鱇', 'あんこう', '<ruby>深海<rt>しんかい</rt></ruby>で大きな口を開けて待つ、ちょうちんを持つ<ruby>怪魚<rt>かいぎょ</rt></ruby>。', 'a'],
+  ['鮑', 'あわび', 'ぬるぬるした足で岩にはりつく、<ruby>高級<rt>こうきゅう</rt></ruby>な<ruby>巻貝<rt>まきがい</rt></ruby>。', 'a'],
+  ['鰩', 'えい', '平たい体で<ruby>海底<rt>かいてい</rt></ruby>をすべるように泳ぐ。', 'a'],
+  ['鰈', 'かれい', '両目が体の<ruby>右側<rt>みぎがわ</rt></ruby>に寄った、ひらべったい魚。', 'a'],
+  ['鮃', 'ひらめ', 'かれいにそっくり。目は体の<ruby>左側<rt>ひだりがわ</rt></ruby>に寄る。', 'a'],
+  ['鮋', 'かさご', 'とげとげの<ruby>毒針<rt>どくばり</rt></ruby>を持つ、いかつい顔の魚。', 'a'],
+  ['鱸', 'すずき', '<ruby>出世魚<rt>しゅっせぎょ</rt></ruby>。大きく育つと<ruby>風格<rt>ふうかく</rt></ruby>ある顔つきに。', 'a'],
+  ['鯒', 'こち', '平たい頭でぬめる体、砂に<ruby>潜る<rt>もぐる</rt></ruby>魚。', 'a'],
+  ['鱧', 'はも', '<ruby>鋭い<rt>するどい</rt></ruby><ruby>小骨<rt>こぼね</rt></ruby>が多い、京都の夏の<ruby>味覚<rt>みかく</rt></ruby>。', 'a'],
+  ['鯨', 'くじら', '実は<ruby>哺乳類<rt>ほにゅうるい</rt></ruby>！なのに魚へんの字。海一番の<ruby>巨体<rt>きょたい</rt></ruby>。', 'a'],
+  ['鰍', 'かじか', '冷たい<ruby>渓流<rt>けいりゅう</rt></ruby>にすむ、ずんぐりした顔の小魚。', 'a'],
+  ['鯊', 'はぜ', '<ruby>河口<rt>かこう</rt></ruby>や<ruby>砂地<rt>すなじ</rt></ruby>にすむ、日本中でおなじみの小魚。', 'a'],
+  ['鱓', 'うつぼ', '<ruby>岩穴<rt>いわあな</rt></ruby>に<ruby>潜み<rt>ひそみ</rt></ruby>、<ruby>鋭い<rt>するどい</rt></ruby>歯で<ruby>獲物<rt>えもの</rt></ruby>を<ruby>捕らえる<rt>とらえる</rt></ruby>。', 'a'],
+  ['鱚', 'きす', '天ぷらでおなじみの、<ruby>砂浜<rt>すなはま</rt></ruby>にすむ細長い魚。', 'a'],
+  ['鰒', 'ふぐ', '毒を持つことで知られる、丸くふくらむ魚。', 'a'],
+  ['鰰', 'はたはた', '雷が鳴る<ruby>初冬<rt>しょとう</rt></ruby>にとれる、秋田の<ruby>味覚<rt>みかく</rt></ruby>。', 'a'],
+  ['鱵', 'さより', '細長い体と<ruby>下あご<rt>したあご</rt></ruby>が<ruby>特徴<rt>とくちょう</rt></ruby>の、<ruby>上品<rt>じょうひん</rt></ruby>な<ruby>白身魚<rt>しろみざかな</rt></ruby>。', 'a'],
+  ['鯢', 'さんしょううお', '<ruby>谷川<rt>たにがわ</rt></ruby>にすむ、日本<ruby>最大級<rt>さいだいきゅう</rt></ruby>の<ruby>両生類<rt>りょうせいるい</rt></ruby>。', 'a'],
+  ['鱘', 'ちょうざめ', 'キャビアで知られる、<ruby>古代<rt>こだい</rt></ruby>から生きる<ruby>大型魚<rt>おおがたぎょ</rt></ruby>。', 'a'],
+  ['鱶', 'ふか', '鮫の<ruby>別名<rt>べつめい</rt></ruby>。西日本でよく使われる<ruby>呼び方<rt>よびかた</rt></ruby>。', 'a'],
+  ['鰌', 'どじょう', '田んぼの<ruby>泥<rt>どろ</rt></ruby>にひそむ、ひげの生えた細長い魚。', 'a'],
+  ['鮴', 'ごり', '<ruby>川底<rt>かわぞこ</rt></ruby>の石にはりつく、小さなハゼの仲間。', 'a'],
+  ['鰉', 'ひがい', '<ruby>琵琶湖<rt>びわこ</rt></ruby>の<ruby>名物<rt>めいぶつ</rt></ruby>。<ruby>明治天皇<rt>めいじてんのう</rt></ruby>も<ruby>好んだ<rt>このんだ</rt></ruby>という魚。', 'a'],
+  ['魬', 'はまち', '<ruby>出世魚<rt>しゅっせぎょ</rt></ruby>ぶりの<ruby>若い<rt>わかい</rt></ruby>名前。<ruby>関西<rt>かんさい</rt></ruby>でよく使う<ruby>呼び方<rt>よびかた</rt></ruby>。', 'a'],
+  ['鮮', 'せん', '生き生きして新しいこと。「<ruby>新鮮<rt>しんせん</rt></ruby>」の鮮。動物そのものじゃないよ！', 's'],
+  ['鱗', 'うろこ', '魚の体をおおう小さな板。生き物じゃなく体の<ruby>部品<rt>ぶひん</rt></ruby>。', 's'],
+  ['鰭', 'ひれ', '魚が泳ぐための、手足のような<ruby>部分<rt>ぶぶん</rt></ruby>。', 's'],
+  ['魯', 'ろ', '「おろか、にぶい」という意味。<ruby>孔子<rt>こうし</rt></ruby>が生まれた中国の<ruby>国名<rt>こくめい</rt></ruby>でもある。', 's'],
+  ['鰥', 'かん', '<ruby>妻<rt>つま</rt></ruby>を<ruby>亡くした<rt>なくした</rt></ruby><ruby>男性<rt>だんせい</rt></ruby>を表す言葉。大きな魚を指した古い意味も。', 's'],
+  ['鯱', 'しゃち', 'お城の<ruby>屋根<rt>やね</rt></ruby>を<ruby>飾る<rt>かざる</rt></ruby><ruby>想像上<rt>そうぞうじょう</rt></ruby>の生き物。海の<ruby>王者<rt>おうじゃ</rt></ruby>シャチと同じ名前。', 's'],
+  ['鰲', 'ごう', '中国の<ruby>伝説<rt>でんせつ</rt></ruby>で<ruby>仙山<rt>せんざん</rt></ruby>を<ruby>背負う<rt>せおう</rt></ruby>という、<ruby>巨大<rt>きょだい</rt></ruby>な<ruby>神獣<rt>しんじゅう</rt></ruby>。', 's'],
+  ['鰓', 'えら', '魚が<ruby>呼吸<rt>こきゅう</rt></ruby>するための<ruby>器官<rt>きかん</rt></ruby>。生き物そのものじゃないよ。', 's'],
+  ['鯑', 'かずのこ', 'にしんの<ruby>卵<rt>たまご</rt></ruby>を干したもの。お正月の<ruby>縁起物<rt>えんぎもの</rt></ruby>。', 's'],
+  ['鮨', 'すし', '魚を使った<ruby>料理<rt>りょうり</rt></ruby>の名前。動物の名前じゃないよ。', 's'],
+  ['鱻', 'せん', '魚が3つ！「<ruby>新鮮<rt>しんせん</rt></ruby>」のように、生き生きしたさまを表す字。', 's'],
+  ['鱲', 'からすみ', 'ぼらの<ruby>卵<rt>たまご</rt></ruby>を<ruby>塩漬け<rt>しおづけ</rt></ruby>にした、<ruby>高級<rt>こうきゅう</rt></ruby><ruby>珍味<rt>ちんみ</rt></ruby>。', 's'],
+  ['鯣', 'するめ', 'いかを開いて干した食べ物。するめいかの「するめ」。', 's']
+];
+</script>
+<script>
+const MUSHI = [
+  ['蝶', 'ちょう', 'ひらひら舞う、<ruby>花畑<rt>はなばたけ</rt></ruby>の人気者。', 'a'],
+  ['蛍', 'ほたる', 'お尻を光らせる、夏の夜の<ruby>妖精<rt>ようせい</rt></ruby>。', 'a'],
+  ['蜻蛉', 'とんぼ', 'すいすい飛ぶ、秋の空の名パイロット。', 'a'],
+  ['蛙', 'かえる', '田んぼでケロケロ鳴く、<ruby>愛され者<rt>あいされもの</rt></ruby>。', 'a'],
+  ['蟹', 'かに', '<ruby>甲羅<rt>こうら</rt></ruby>とはさみが<ruby>自慢<rt>じまん</rt></ruby>。鍋の<ruby>主役<rt>しゅやく</rt></ruby>にもなる<ruby>海の幸<rt>うみのさち</rt></ruby>。', 'a'],
+  ['蛤', 'はまぐり', 'お吸い物でおなじみの<ruby>二枚貝<rt>にまいがい</rt></ruby>。', 'a'],
+  ['蝦', 'えび', '天ぷらやお寿司で大人気。魚へんの「鰕」と同じ意味を持つ字。', 'a'],
+  ['蜆', 'しじみ', '<ruby>味噌汁<rt>みそしる</rt></ruby>の<ruby>定番<rt>ていばん</rt></ruby>、小さな<ruby>二枚貝<rt>にまいがい</rt></ruby>。', 'a'],
+  ['蠣', 'かき', '「海のミルク」と<ruby>呼ばれる<rt>よばれる</rt></ruby>、冬が<ruby>旬<rt>しゅん</rt></ruby>の<ruby>二枚貝<rt>にまいがい</rt></ruby>。', 'a'],
+  ['蟋蟀', 'こおろぎ', 'リーンリーンと鳴く、秋の虫の<ruby>代表<rt>だいひょう</rt></ruby>。', 'a'],
+  ['螺', 'つぶ', 'くるくる巻いた<ruby>殻<rt>から</rt></ruby>を持つ、つぶ貝として食べられる<ruby>巻貝<rt>まきがい</rt></ruby>。', 'a'],
+  ['蜂', 'はち', '針を持つ、ぶんぶん飛ぶ<ruby>危険<rt>きけん</rt></ruby>な虫。', 'a'],
+  ['蟻', 'あり', '<ruby>行列<rt>ぎょうれつ</rt></ruby>を作って歩く、群れると<ruby>迫力満点<rt>はくりょくまんてん</rt></ruby>。', 'a'],
+  ['蝉', 'せみ', '夏に大<ruby>合唱<rt>がっしょう</rt></ruby>、抜け<ruby>殻<rt>から</rt></ruby>もよく見つかる。', 'a'],
+  ['蜘蛛', 'くも', '8本足で<ruby>巣<rt>す</rt></ruby>を張る、虫を食べるハンター。', 'a'],
+  ['蛾', 'が', '夜に<ruby>灯り<rt>あかり</rt></ruby>へ集まる、蝶の仲間だけど粉っぽい羽。', 'a'],
+  ['蚊', 'か', '<ruby>血<rt>ち</rt></ruby>を<ruby>吸う<rt>すう</rt></ruby>、夏の<ruby>大敵<rt>たいてき</rt></ruby>。', 'a'],
+  ['蛇', 'へび', '足がなくにょろにょろ動く。虫へんだけど<ruby>爬虫類<rt>はちゅうるい</rt></ruby>。', 'a'],
+  ['蜥蜴', 'とかげ', '素早く走り、しっぽを切って逃げることも。', 'a'],
+  ['蚕', 'かいこ', '<ruby>桑の葉<rt>くわのは</rt></ruby>を食べて糸を吐く、<ruby>絹<rt>きぬ</rt></ruby>の元になる<ruby>幼虫<rt>ようちゅう</rt></ruby>。', 'a'],
+  ['蛹', 'さなぎ', 'チョウやガになる前の、じっと動かない<ruby>姿<rt>すがた</rt></ruby>。', 'a'],
+  ['蛆', 'うじ', 'ハエの<ruby>幼虫<rt>ようちゅう</rt></ruby>。白くてうごめく。', 'a'],
+  ['蠅', 'はえ', 'ぶんぶん飛び回る、<ruby>不衛生<rt>ふえいせい</rt></ruby>の<ruby>代名詞<rt>だいめいし</rt></ruby>。', 'a'],
+  ['蛭', 'ひる', '<ruby>血<rt>ち</rt></ruby>を<ruby>吸って<rt>すって</rt></ruby><ruby>伸び縮み<rt>のびちぢみ</rt></ruby>する、水辺の生き物。', 'a'],
+  ['蜈蚣', 'むかで', 'たくさんの足で素早く<ruby>這う<rt>はう</rt></ruby>、かまれると<ruby>痛い<rt>いたい</rt></ruby>。', 'a'],
+  ['蚯蚓', 'みみず', '土の中をうごめき、土を<ruby>肥やす<rt>こやす</rt></ruby><ruby>縁の下の力持ち<rt>えんのしたのちからもち</rt></ruby>。', 'a'],
+  ['蟇', 'がま', '大きくてごつごつした、<ruby>伝説<rt>でんせつ</rt></ruby>にも<ruby>登場する<rt>とうじょうする</rt></ruby>ヒキガエル。', 'a'],
+  ['蝙蝠', 'こうもり', '夜空を飛ぶ、<ruby>超音波<rt>ちょうおんぱ</rt></ruby>を使うほ<ruby>乳類<rt>にゅうるい</rt></ruby>。', 'a'],
+  ['虱', 'しらみ', '<ruby>髪<rt>かみ</rt></ruby>の毛にひそむ、小さな<ruby>吸血<rt>きゅうけつ</rt></ruby><ruby>害虫<rt>がいちゅう</rt></ruby>。', 'a'],
+  ['蚤', 'のみ', 'ぴょんと<ruby>跳ねる<rt>はねる</rt></ruby>、<ruby>血<rt>ち</rt></ruby>を<ruby>吸う<rt>すう</rt></ruby>小さな<ruby>害虫<rt>がいちゅう</rt></ruby>。', 'a'],
+  ['蟷螂', 'かまきり', '<ruby>鎌<rt>かま</rt></ruby>のような前足を持つ、<ruby>昆虫界<rt>こんちゅうかい</rt></ruby>のハンター。', 'a'],
+  ['蜊', 'あさり', '<ruby>潮干狩り<rt>しおひがり</rt></ruby>でおなじみの、小さな<ruby>二枚貝<rt>にまいがい</rt></ruby>。', 'a'],
+  ['蚜', 'あぶらむし', '<ruby>植物<rt>しょくぶつ</rt></ruby>の<ruby>汁<rt>しる</rt></ruby>を<ruby>吸う<rt>すう</rt></ruby>小さな<ruby>害虫<rt>がいちゅう</rt></ruby>。ありに<ruby>蜜<rt>みつ</rt></ruby>をあげて守ってもらう。', 'a'],
+  ['虻', 'あぶ', 'ハエに似ていて、<ruby>血<rt>ち</rt></ruby>を<ruby>吸う<rt>すう</rt></ruby>こともある羽虫。', 'a'],
+  ['蝗', 'いなご', '<ruby>稲<rt>いね</rt></ruby>を食べる、バッタの仲間。<ruby>佃煮<rt>つくだに</rt></ruby>でも知られる。', 'a'],
+  ['蜉蝣', 'かげろう', '<ruby>成虫<rt>せいちゅう</rt></ruby>の命がわずか数時間ということもある、はかない虫。', 'a'],
+  ['螻蛄', 'けら', '土の中をシャベルのような前足で<ruby>掘り<rt>ほり</rt></ruby>進む虫。', 'a'],
+  ['蝌蚪', 'おたまじゃくし', 'かえるになる前の、しっぽのある赤ちゃんの<ruby>姿<rt>すがた</rt></ruby>。', 'a'],
+  ['蝸牛', 'かたつむり', '<ruby>殻<rt>から</rt></ruby>を<ruby>背負って<rt>せおって</rt></ruby>ゆっくり進む、雨の日の人気者。', 'a'],
+  ['蠹', 'きくいむし', '木の中に穴をあけて<ruby>暮らす<rt>くらす</rt></ruby>、小さな<ruby>甲虫<rt>こうちゅう</rt></ruby>。', 'a'],
+  ['螽斯', 'きりぎりす', '<ruby>草原<rt>そうげん</rt></ruby>でギースチョンと鳴く、バッタに似た虫。', 'a'],
+  ['蚰蜒', 'げじ', 'たくさんの長い<ruby>脚<rt>あし</rt></ruby>を持つ、家に出ることもある虫。', 'a'],
+  ['蠍', 'さそり', '<ruby>尾<rt>お</rt></ruby>の先の<ruby>毒針<rt>どくばり</rt></ruby>で<ruby>獲物<rt>えもの</rt></ruby>をしとめる、<ruby>砂漠<rt>さばく</rt></ruby>のハンター。', 'a'],
+  ['螟', 'ずいむし', '<ruby>稲<rt>いね</rt></ruby>の<ruby>茎<rt>くき</rt></ruby>の中に<ruby>潜り込む<rt>もぐりこむ</rt></ruby>、<ruby>農家<rt>のうか</rt></ruby>を<ruby>悩ませる<rt>なやませる</rt></ruby><ruby>幼虫<rt>ようちゅう</rt></ruby>。', 'a'],
+  ['雀蜂', 'すずめばち', '強い<ruby>毒針<rt>どくばり</rt></ruby>を持つ、蜂の中でも特に<ruby>危険<rt>きけん</rt></ruby>な<ruby>種類<rt>しゅるい</rt></ruby>。', 'a'],
+  ['蟎', 'だに', '目に見えないほど小さいことが多い、<ruby>吸血性<rt>きゅうけつせい</rt></ruby>の生き物。', 'a'],
+  ['蛞蝓', 'なめくじ', '<ruby>殻<rt>から</rt></ruby>のないかたつむり。塩をかけると<ruby>縮む<rt>ちぢむ</rt></ruby>ことで有名。', 'a'],
+  ['蠼螋', 'はさみむし', 'お尻のはさみで<ruby>卵<rt>たまご</rt></ruby>や子どもを守る虫。', 'a'],
+  ['蝟', 'はりねずみ', '背中がとげだらけの小さな<ruby>哺乳類<rt>ほにゅうるい</rt></ruby>。虫へんだけど虫じゃない。', 'a'],
+  ['蜩', 'ひぐらし', '<ruby>夕方<rt>ゆうがた</rt></ruby>にカナカナと鳴く、もの<ruby>悲しい<rt>かなしい</rt></ruby>声のせみ。', 'a'],
+  ['蚋', 'ぶよ', '<ruby>皮膚<rt>ひふ</rt></ruby>に<ruby>噛み<rt>かみ</rt></ruby>ついて<ruby>激しく<rt>はげしく</rt></ruby>かゆくなる、小さな<ruby>吸血<rt>きゅうけつ</rt></ruby>虫。', 'a'],
+  ['蝮', 'まむし', '日本にすむ<ruby>毒蛇<rt>どくへび</rt></ruby>。三角の頭が<ruby>特徴<rt>とくちょう</rt></ruby>。', 'a'],
+  ['融', 'ゆう', 'とけて一つに<ruby>混ざり<rt>まざり</rt></ruby>合うこと。「<ruby>金融<rt>きんゆう</rt></ruby>」の融。生き物じゃないよ！', 's'],
+  ['蝕', 'しょく', '少しずつ<ruby>食い荒らされる<rt>くいあらされる</rt></ruby>こと。「日食」の<ruby>旧字<rt>きゅうじ</rt></ruby>にも使われる。', 's'],
+  ['虹', 'にじ', '<ruby>雨上がり<rt>あめあがり</rt></ruby>の空にかかる7色の橋。昔の中国では竜と考えられていた。', 's'],
+  ['蟄', 'ちつ', '虫が土の中にひそみ、じっとしていること。「<ruby>啓蟄<rt>けいちつ</rt></ruby>」という言葉で使う。', 's'],
+  ['蜃', 'しん', '大きなはまぐりの<ruby>妖怪<rt>ようかい</rt></ruby>。その息が空に<ruby>幻<rt>まぼろし</rt></ruby>の城を見せる「<ruby>蜃気楼<rt>しんきろう</rt></ruby>」の<ruby>由来<rt>ゆらい</rt></ruby>。', 's'],
+  ['蠱', 'こ', '虫を使ったまじないで人の心を<ruby>惑わす<rt>まどわす</rt></ruby>こと。', 's'],
+  ['蛟', 'みずち', '水の中にすむと<ruby>信じられて<rt>しんじられて</rt></ruby>いた、<ruby>伝説<rt>でんせつ</rt></ruby>の竜。', 's'],
+  ['蟒', 'うわばみ', 'とても大きな<ruby>伝説<rt>でんせつ</rt></ruby>の蛇。<ruby>大酒飲み<rt>おおざけのみ</rt></ruby>の<ruby>例え<rt>たとえ</rt></ruby>にも使う。', 's'],
+  ['蛻', 'ぬけがら', 'せみや蛇が<ruby>脱皮<rt>だっぴ</rt></ruby>したあとの<ruby>殻<rt>から</rt></ruby>。生き物そのものじゃないよ。', 's']
+];
+const ADVANCED = [
+  ['鰝', 'いせえび', '伊勢海老をあらわす、魚へんのめずらしい字。大きくて高級なエビ。', 'a'],
+  ['鮀', 'なまず', 'なまずをあらわす、もう一つの魚へんの字。', 'a'],
+  ['鰢', 'うみえび', '海にすむエビの仲間をあらわす、古い字。', 'a'],
+  ['鱁', 'ちく', 'いるかの仲間をあらわす、めずらしい字。', 'a'],
+  ['鯥', 'むつ', '脂がのった冬が旬の高級魚「むつ」。', 'a'],
+  ['鰱', 'たなご', '田んぼの用水路にもすむ、小さな魚「たなご」。', 'a'],
+  ['鮊', 'しらうお', '春を告げる、透きとおった体の小魚「しらうお」。', 'a'],
+  ['鮹', 'たこ', 'あしが8本、魚へんであらわされる「たこ」。', 'a'],
+  ['魷', 'いか', 'するめいかなどの「いか」をあらわす字。', 'a'],
+  ['魵', 'えび', 'えびをあらわす、魚へんの字。', 'a'],
+  ['鰣', 'はす', '琵琶湖に多い、コイの仲間「はす」。', 'a'],
+  ['鯏', 'うぐい', 'うぐいやあさりを指すこともある字。', 'a'],
+  ['鰙', 'わかさぎ', '氷に穴をあけて釣る、冬の風物詩「わかさぎ」。', 'a'],
+  ['魹', 'とど', '北の海にすむ、大きなアシカの仲間「トド」。', 'a'],
+  ['鮸', 'にべ', '「にべもない」という言葉のもとになった魚。', 'a'],
+  ['鰾', 'うきぶくろ', '魚が浮き沈みを調節するための袋。生き物そのものじゃないよ。', 's'],
+  ['鮶', 'めばる', '春を告げる根魚「めばる」。', 'a'],
+  ['鯺', 'はた', '高級魚として知られる「はた」。', 'a'],
+  ['鮗', 'このしろ', '江戸前寿司でおなじみの、出世魚「このしろ」。', 'a'],
+  ['鯳', 'すけとうだら', 'かまぼこやたらこの原料になる「すけとうだら」。', 'a'],
+  ['蠨蛸', 'アシタカグモ', 'ゴキブリも食べる、大きくて足の長いクモ。', 'a'],
+  ['蛺蝶', 'タテハチョウ', '前あしが小さく、4本足に見えるチョウの仲間。', 'a'],
+  ['蝪', 'ツチグモ', '地面に巣穴を作る、原始的な大型のクモ。', 'a'],
+  ['蜾蠃', 'スガル', '万葉集にも登場する、じがばちの古い呼び名。', 'a'],
+  ['蛁蟟', 'ミンミンゼミ', 'ミーンミンと鳴く、夏の代表的なせみ。', 'a'],
+  ['蟶', 'まて', '砂浜に垂直に潜る、細長い二枚貝「まて貝」。', 'a'],
+  ['蟯', 'ぎょうちゅう', 'おなかにすみつく、小さな寄生虫。学校の検査でおなじみ。', 'a'],
+  ['蜷', 'にな', 'くるくる巻いた殻を持つ、川や田んぼにすむ巻貝。', 'a'],
+  ['蜚蠊', 'ごきぶり', '夜に台所を走り回る、大きらいな人が多い虫。', 'a'],
+  ['蚍蜉', 'おおあり', '大きなありをあらわす、古い言葉。', 'a'],
+  ['蠛蠓', 'ぬかか', '目に見えにくいほど小さい、刺す虫。', 'a'],
+  ['蟢', 'ささがに', '和歌の世界で使われる、くもの古い呼び名。', 'a'],
+  ['蟠', 'わだかまる', '心にわだかまりが残ること。生き物そのものじゃないよ。', 's'],
+  ['螫', 'さす', '虫が針や毒で刺すこと。生き物そのものじゃないよ。', 's'],
+  ['螟蛉', 'めいれい', 'よそから来た子を我が子として育てること。もとは蛾の幼虫の名前。', 's'],
+  ['魭', 'あおうみがめ', '四肢がひれ状の大型ウミガメ。魚偏だが<ruby>爬虫類<rt>はちゅうるい</rt></ruby>', 'a'],
+  ['鯘', 'アザレ', '魚が<ruby>腐敗<rt>ふはい</rt></ruby>・<ruby>腐臭<rt>ふしゅう</rt></ruby>を放つことを表す字。食用の魚ではなく状態を指す', 's'],
+  ['鰺', 'あじ', '鯵の<ruby>旧字体<rt>きゅうじたい</rt></ruby>。JIS第3水準の漢字で常用外', 'a'],
+  ['鮩', 'あみ', 'エビに似た小型<ruby>甲殻類<rt>こうかくるい</rt></ruby>。<ruby>佃煮<rt>つくだに</rt></ruby>・キムチの調味料に使われる', 'a'],
+  ['鯇', 'あめのうお', '<ruby>琵琶湖固有種<rt>びわここゆうしゅ</rt></ruby>のビワマスの<ruby>別名<rt>べつめい</rt></ruby>', 'a'],
+  ['鰀', 'あめのうお', '鯇の<ruby>異体字<rt>いたいじ</rt></ruby>。同じくビワマスを指す<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鰞', 'いか', 'イカの<ruby>別表記<rt>べつひょうき</rt></ruby>。中国でよく使われる字で、日本では希少', 'a'],
+  ['鰂', 'いか', 'コウイカを指すことが多い。骨を持つ特殊なイカ', 'a'],
+  ['鮻', 'いさぎ', 'ボラ科のイサギ', 'a'],
+  ['魦', 'いさざ', '<ruby>琵琶湖<rt>びわこ</rt></ruby>固有のハゼ科の魚。<ruby>絶滅危惧種<rt>ぜつめつきぐしゅ</rt></ruby>に指定', 'a'],
+  ['鱊', 'いさざ', '魦の<ruby>異体字<rt>いたいじ</rt></ruby>。<ruby>琵琶湖<rt>びわこ</rt></ruby>の春の<ruby>風物詩<rt>ふうぶつし</rt></ruby>で<ruby>佃煮<rt>つくだに</rt></ruby>が名産', 'a'],
+  ['鰵', 'いしもち', '<ruby>浮き袋<rt>うきぶくろ</rt></ruby>を振動させて鳴く魚として知られる', 'a'],
+  ['鯆', 'いるか', '<ruby>哺乳類<rt>ほにゅうるい</rt></ruby>でありながら魚偏を持つ字。知能が高い', 'a'],
+  ['鰛', 'いわし', '鰯の<ruby>異体字<rt>いたいじ</rt></ruby>。カタクチイワシなど複数のイワシ種に用いられる', 'a'],
+  ['鰮', 'いわし', '鰯の<ruby>旧字体<rt>きゅうじたい</rt></ruby>のひとつ', 'a'],
+  ['鮇', 'いわな', '<ruby>渓流<rt>けいりゅう</rt></ruby>最上流に棲む冷水性のサケ科魚', 'a'],
+  ['鯎', 'うぐい', '強<ruby>酸性<rt>さんせい</rt></ruby>の湖にも生息できる<ruby>淡水魚<rt>たんすいぎょ</rt></ruby>', 'a'],
+  ['魿', 'うろこ', '魚がうねるように泳ぐ動き・うろこを表す字', 'a'],
+  ['鱑', 'うろこ', '鱗の<ruby>異体字<rt>いたいじ</rt></ruby>。魚のうろこを指す古い表記', 'a'],
+  ['鱏', 'えい', '深みに潜む魚という意から「覃」を当てた', 'a'],
+  ['鱝', 'えい', 'エイのさらに<ruby>別表記<rt>べつひょうき</rt></ruby>。<ruby>軟骨魚類<rt>なんこつぎょるい</rt></ruby>で約530種が知られる', 'a'],
+  ['鮧', 'えそ', '細身で歯が<ruby>鋭い<rt>するどい</rt></ruby>エソ科の魚。<ruby>高級<rt>こうきゅう</rt></ruby><ruby>蒲鉾<rt>かまぼこ</rt></ruby>の原料', 'a'],
+  ['鱛', 'えそ', 'エソの<ruby>別表記<rt>べつひょうき</rt></ruby>。<ruby>蒲鉾<rt>かまぼこ</rt></ruby>・すり身の<ruby>高級<rt>こうきゅう</rt></ruby>原料として知られる', 'a'],
+  ['鮆', 'えつ', '<ruby>有明海<rt>ありあけかい</rt></ruby>に生息する希少なニシン科の魚', 'a'],
+  ['魞', 'えり', '竹で作る伝統的な定置漁具', 's'],
+  ['鰧', 'おこぜ', '<ruby>鋭い<rt>するどい</rt></ruby>毒棘を持つカサゴ目の魚', 'a'],
+  ['鯿', 'おしきうお', '体が薄く平たいコイ科の<ruby>淡水魚<rt>たんすいぎょ</rt></ruby>', 'a'],
+  ['鮰', 'かい', 'コイ科またはナマズ科の<ruby>淡水魚<rt>たんすいぎょ</rt></ruby>', 'a'],
+  ['鰄', 'かいらぎ', 'エイやサメの皮の<ruby>加工品<rt>かこうひん</rt></ruby>。武具・工芸素材', 's'],
+  ['鮖', 'かじか', '<ruby>渓流<rt>けいりゅう</rt></ruby>の石の下に潜む<ruby>底生魚<rt>ていせいぎょ</rt></ruby>', 'a'],
+  ['鮦', 'かつお', 'カツオの古い字', 'a'],
+  ['鯟', 'かど', 'ニシンの古語・<ruby>別名<rt>べつめい</rt></ruby>を表す字', 'a'],
+  ['鱟', 'かぶとがに', '約4億年前から<ruby>姿<rt>すがた</rt></ruby>が変わらない「<ruby>生きた化石<rt>いきたかせき</rt></ruby>」。<ruby>節足動物<rt>せっそくどうぶつ</rt></ruby>', 'a'],
+  ['魳', 'かます', '細長い体と<ruby>鋭い<rt>するどい</rt></ruby>歯を持つ<ruby>肉食<rt>にくしょく</rt></ruby>魚', 'a'],
+  ['魪', 'かれい', 'カレイを表す古い字', 'a'],
+  ['鰨', 'かれい', 'カレイのさらに<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鮍', 'かわはぎ', '皮が手でするりと剥げることが名前の<ruby>由来<rt>ゆらい</rt></ruby>', 'a'],
+  ['鱨', 'ぎぎ', 'ナマズの仲間。胸ビレに毒棘がある', 'a'],
+  ['鱜', 'きょう', '中国古典の水中の大魚を指す字', 'a'],
+  ['鮾', 'くさる', '魚が腐ること・<ruby>腐臭<rt>ふしゅう</rt></ruby>を指す字', 's'],
+  ['鯪', 'こい', '中国のコイ科魚を指す字', 'a'],
+  ['鱣', 'こい', 'コイの古い<ruby>異体字<rt>いたいじ</rt></ruby>', 'a'],
+  ['魥', 'こがめ', '小亀またはコチを指す字', 'a'],
+  ['鰶', 'このしろ', 'コノシロの<ruby>別表記<rt>べつひょうき</rt></ruby>。<ruby>神饌<rt>しんせん</rt></ruby>にも使われた', 'a'],
+  ['鰽', 'このしろ', 'コノシロのさらに<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鱔', 'ごまめ', 'ゴマメの<ruby>別表記<rt>べつひょうき</rt></ruby>。ウナギに似た細長い形を持つ<ruby>淡水魚<rt>たんすいぎょ</rt></ruby>', 'a'],
+  ['鮔', 'ごり', '<ruby>石川県<rt>いしかわけん</rt></ruby>の<ruby>郷土料理<rt>きょうどりょうり</rt></ruby>にも使われるハゼ科の<ruby>淡水魚<rt>たんすいぎょ</rt></ruby>', 'a'],
+  ['鯀', 'コン', '中国<ruby>神話<rt>しんわ</rt></ruby>の<ruby>治水神<rt>ちすいしん</rt></ruby>。禹の父', 's'],
+  ['鯤', 'コン', '<ruby>荘子<rt>そうじ</rt></ruby>に<ruby>登場する<rt>とうじょうする</rt></ruby>数千里もの<ruby>巨大<rt>きょだい</rt></ruby>魚', 'a'],
+  ['魫', 'さかなのこ', '魚の<ruby>卵<rt>たまご</rt></ruby>を指す古語', 's'],
+  ['鮏', 'さけ', '鮭の古い字', 'a'],
+  ['鯹', 'さけ', 'サケの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鱖', 'さけ', 'サケのさらに<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鮄', 'さば', 'ホウボウまたはサバを指す字', 'a'],
+  ['鱪', 'しいら', '外洋を群れで泳ぐ<ruby>大型魚<rt>おおがたぎょ</rt></ruby>。ハワイではマヒマヒと<ruby>呼ばれる<rt>よばれる</rt></ruby>', 'a'],
+  ['鱰', 'しいら', 'シイラの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鱐', 'しゃちほこ', '鯱鉾の<ruby>別名<rt>べつめい</rt></ruby>を表す字。城の<ruby>屋根<rt>やね</rt></ruby>に飾られる', 's'],
+  ['鮼', 'シン', '<ruby>深海<rt>しんかい</rt></ruby>性の魚を表す字', 'a'],
+  ['鮓', 'すし', '押し寿司・なれずし・酢〆など発酵系のすしを指す古い字', 's'],
+  ['鱉', 'すっぽん', '<ruby>甲羅<rt>こうら</rt></ruby>が柔らかいカメの仲間', 'a'],
+  ['鯐', 'すばしり', 'ボラの幼魚の名前', 'a'],
+  ['鰑', 'するめ', 'スルメの<ruby>別表記<rt>べつひょうき</rt></ruby>', 's'],
+  ['鮬', 'せいご', 'スズキの幼魚の名称', 'a'],
+  ['鱄', 'セン', '鮮の<ruby>旧字体<rt>きゅうじたい</rt></ruby>', 'a'],
+  ['鮉', 'たい', 'タイの古い字', 'a'],
+  ['鰖', 'たかべ', 'イサキ科の<ruby>海水魚<rt>かいすいぎょ</rt></ruby>', 'a'],
+  ['鱆', 'たこ', 'タコの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['魛', 'たちうお', '刀のように細長い銀色の魚タチウオを指す', 'a'],
+  ['魣', 'たなご', 'コイ科の<ruby>淡水魚<rt>たんすいぎょ</rt></ruby>で<ruby>二枚貝<rt>にまいがい</rt></ruby>の中に産<ruby>卵<rt>たまご</rt></ruby>する珍しい習性を持つ', 'a'],
+  ['鱮', 'たなご', 'タナゴのさらに<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鰔', 'たら', 'タラとカレイの両方に使われる字', 'a'],
+  ['鱅', 'ちちかぶり', 'ハクレン属の中国原産の大型<ruby>淡水魚<rt>たんすいぎょ</rt></ruby>', 'a'],
+  ['鯯', 'つなし', 'コノシロの幼魚の名称', 'a'],
+  ['鯲', 'どじょう', '<ruby>泥<rt>どろ</rt></ruby>の中に潜む<ruby>淡水魚<rt>たんすいぎょ</rt></ruby>', 'a'],
+  ['鱃', 'どじょう', 'ドジョウのさらに<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['魸', 'なます', '魚や野菜を酢で和えた<ruby>料理<rt>りょうり</rt></ruby>', 's'],
+  ['鱠', 'なます', 'なますの<ruby>別表記<rt>べつひょうき</rt></ruby>で正式な字', 's'],
+  ['鰋', 'なまず', 'ナマズの古い表記', 'a'],
+  ['鮷', 'なまず', 'ナマズとスケソウダラの両方を指す字', 'a'],
+  ['鯡', 'にしん', '「非」を当てた字', 'a'],
+  ['鰜', 'にしん', 'ニシンの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鯁', 'のぎ', '喉に刺さった魚の骨を指す字', 's'],
+  ['鱩', 'はたはた', 'ハタハタの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鮚', 'はまぐり', '<ruby>二枚貝<rt>にまいがい</rt></ruby>のハマグリを魚偏で表した字', 'a'],
+  ['鮠', 'はや', 'ハヤの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鰦', 'はや', 'ハヤのさらに<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鰷', 'はや', 'ハヤとハエを指す字', 'a'],
+  ['鯈', 'はや', 'ハヤ・ハエの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鰚', 'はらか', '干した塩魚・魚の<ruby>保存食<rt>ほぞんしょく</rt></ruby>を指す字', 's'],
+  ['鮞', 'はららご', '魚の<ruby>卵<rt>たまご</rt></ruby>・真子を指す古語', 's'],
+  ['鯝', 'はらわた', '魚の<ruby>内臓<rt>ないぞう</rt></ruby>・腸を指す字', 's'],
+  ['魮', 'ヒ', '中国の古典に<ruby>登場する<rt>とうじょうする</rt></ruby>魚類を指す字', 'a'],
+  ['鯷', 'ひしこ', 'カタクチイワシの<ruby>別名<rt>べつめい</rt></ruby>ヒシコを指す字', 'a'],
+  ['鰏', 'ヒョク', 'タイ科に近縁の小型<ruby>海水魚<rt>かいすいぎょ</rt></ruby>を指す中国<ruby>由来<rt>ゆらい</rt></ruby>の字', 'a'],
+  ['鮝', 'ふか', 'サメの<ruby>別名<rt>べつめい</rt></ruby>フカを表す字', 'a'],
+  ['鮐', 'ふぐ', 'フグを表す字のひとつ。猛毒テトロドトキシンで有名', 'a'],
+  ['鯸', 'ふぐ', 'フグの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['魨', 'ふぐ', 'フグの古い表記', 'a'],
+  ['鯽', 'ふな', 'フナの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['魴', 'ほうぼう', '翼のようなひれで「歩く」<ruby>姿<rt>すがた</rt></ruby>が有名なカサゴ目の魚', 'a'],
+  ['鮿', 'ほしうお', '魚の<ruby>干物<rt>ひもの</rt></ruby>・干し魚を指す字', 's'],
+  ['鮱', 'ぼら', 'ボラの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鰡', 'ぼら', 'ボラの一般的な漢字', 'a'],
+  ['鯔', 'ぼら', 'ボラとその幼魚イナを兼ねた字', 'a'],
+  ['鮅', 'ます', 'マスの古い字', 'a'],
+  ['鮲', 'まて', 'マテガイまたはコチを指す字', 'a'],
+  ['鯧', 'まながつお', '「昌」を当てた<ruby>高級魚<rt>こうきゅうぎょ</rt></ruby>', 'a'],
+  ['鰪', 'まながつお', 'マナガツオの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鯫', 'みごい', 'コイ科の雑魚・小魚を指す字', 'a'],
+  ['鱎', 'みごい', 'ミゴイの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鱫', 'むつ', 'ムツの<ruby>別表記<rt>べつひょうき</rt></ruby>', 'a'],
+  ['鰘', 'むろあじ', '温暖な海に生息するアジ科の魚', 'a'],
+  ['鱞', 'やもお', '<ruby>妻<rt>つま</rt></ruby>に先立たれた<ruby>男性<rt>だんせい</rt></ruby>を魚偏で表した字', 's'],
+  ['鱷', 'わに', 'ワニの<ruby>別表記<rt>べつひょうき</rt></ruby>。クロコダイルを指すことが多い', 'a'],
+  ['鮕', 'おこぜ', 'オコゼの<ruby>異体字<rt>いたいじ</rt></ruby>', 'a'],
+  ['蚫', 'あわび', '岩礁に張りつく大型の一枚貝', 'a'],
+  ['蛯', 'えび', '甲殻類で脱皮しながら成長する水生動物', 'a'],
+  ['蛎', 'かき', '岩や貝殻に付着して育つ二枚貝', 'a'],
+  ['蟬', 'せみ', '蝉の<ruby>旧字体<rt>きゅうじたい</rt></ruby>。土中で数年過ごし地上で鳴く昆虫', 'a'],
+  ['蝎', 'さそり', '蠍の<ruby>異体字<rt>いたいじ</rt></ruby>。尾に毒針を持つ<ruby>節足動物<rt>せっそくどうぶつ</rt></ruby>', 'a'],
+];
+</script>
+<script>
+function makeState(data, radical){
+  return data.map((d,i)=>({idx:i, radical, kanji:d[0], reading:d[1], meaning:d[2], cat:d[3], answered:false, everAnswered:false, correct:false, triedWrong:false}));
+}
+const DECKS = { uo: makeState(UO,'uo'), mushi: makeState(MUSHI,'mushi'), advanced: makeState(ADVANCED,'advanced') };
+const LABELS = { uo:'魚偏', mushi:'虫偏', advanced:'上級編' };
+// まちがいノートを横断させる相手デッキ（魚偏・虫偏はまちがいを共有する。上級編は単独）
+function crossPartners(radical){
+  return (radical==='uo' || radical==='mushi') ? ['uo','mushi'] : [radical];
+}
+function crossWrongItems(radical){
+  return crossPartners(radical).flatMap(r=> DECKS[r].filter(it=>it.answered && !it.correct));
+}
+
+let current = { radical:null, queue:[], pos:0 };
+// 履歴：挑戦した順に積み上がっていくログ（未挑戦のものは載らない）
+let historyLog = [];
+function recordHistory(item){
+  if(!historyLog.includes(item)) historyLog.push(item);
+}
+
+document.getElementById('uoCount').textContent = UO.length;
+document.getElementById('mushiCount').textContent = MUSHI.length;
+document.getElementById('advancedCount').textContent = ADVANCED.length;
+
+const VIEW_TITLES = { splash:'スプラッシュ', title:'タイトル', author:'作者', history:'履歴', deck:'クイズ', mistakes:'まちがいノート', complete:'完了' };
+let lastTrackedViewKey = null;
+function viewKey(v){
+  if(v !== 'deck') return v;
+  const radical = current.radical || (current.queue[0] && current.queue[0].radical) || 'mixed';
+  return v + ':' + radical;
+}
+function trackPageView(v){
+  const key = viewKey(v);
+  if(key === lastTrackedViewKey) return;
+  lastTrackedViewKey = key;
+  if(typeof gtag !== 'function') return;
+  let label = VIEW_TITLES[v] || v;
+  let path = '/' + v;
+  if(v === 'deck'){
+    const radical = current.radical || (current.queue[0] && current.queue[0].radical) || '';
+    if(radical && LABELS[radical]){ label += '：' + LABELS[radical]; path += '/' + radical; }
+  }
+  gtag('event', 'page_view', {
+    page_title: 'うおへん・むしへん図鑑｜' + label,
+    page_location: location.href.split('#')[0] + '#' + path,
+    page_path: path
+  });
+}
+function setView(v){
+  document.body.dataset.view = v;
+  window.scrollTo(0,0);
+  trackPageView(v);
+}
+
+document.getElementById('splashScreen').addEventListener('click', ()=> setView('title'));
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function startDeck(radical){
+  current.radical = radical;
+  const items = DECKS[radical];
+  const remaining = shuffle(items.filter(it=>!it.correct));
+  if(remaining.length===0){
+    document.getElementById('completeTitle').textContent = LABELS[radical]+'、ぜんぶ読み終わりました。';
+    document.getElementById('completeSub').textContent = '全'+items.length+'字、すべて正解です。';
+    setView('complete');
+    return;
+  }
+  current.queue = remaining;
+  current.pos = 0;
+  setView('deck');
+  renderCard();
+}
+
+document.getElementById('pickUo').addEventListener('click', ()=> startDeck('uo'));
+document.getElementById('pickMushi').addEventListener('click', ()=> startDeck('mushi'));
+document.getElementById('pickAdvanced').addEventListener('click', ()=> startDeck('advanced'));
+document.getElementById('deckBack').addEventListener('click', ()=>{ clearAllTimers(); setView('title'); });
+document.getElementById('mistakeIndicator').addEventListener('click', ()=>{
+  clearAllTimers();
+  const item = currentItem();
+  const wrongItems = crossWrongItems(item.radical);
+  if(wrongItems.length>0){ renderMistakes(wrongItems); setView('mistakes'); }
+});
+
+function currentItem(){
+  return current.queue[current.pos];
+}
+
+let advanceTimer = null;
+let countdownTimer = null;
+let timeLeft = 30;
+
+function clearAllTimers(){
+  if(advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
+  if(countdownTimer){ clearInterval(countdownTimer); countdownTimer = null; }
+  const td = document.getElementById('timerDisplay');
+  if(td) td.textContent = '';
+}
+
+function typewriter(el, html, speed, onDone){
+  if(el._twTimer){ clearTimeout(el._twTimer); el._twTimer = null; }
+  const tokens = html.match(/<ruby>[\s\S]*?<\/ruby>|[\s\S]/g) || [];
+  el.innerHTML = '';
+  let i = 0;
+  function step(){
+    if(i >= tokens.length){ el._twTimer = null; if(onDone) onDone(); return; }
+    el.innerHTML += tokens[i];
+    i++;
+    el._twTimer = setTimeout(step, speed);
+  }
+  step();
+}
+
+function updateTimerDisplay(){
+  const el = document.getElementById('timerDisplay');
+  if(!el) return;
+  el.textContent = (timeLeft<=10 && timeLeft>=0) ? ('あと '+timeLeft+' びょう') : '';
+  el.classList.toggle('urgent', timeLeft<=5 && timeLeft>=0);
+}
+
+function startCountdown(item, choicesWrap){
+  timeLeft = 30;
+  updateTimerDisplay();
+  countdownTimer = setInterval(()=>{
+    timeLeft--;
+    updateTimerDisplay();
+    if(timeLeft<=0){
+      clearInterval(countdownTimer);
+      countdownTimer = null;
+      if(!item.answered){ timeoutAnswer(item, choicesWrap); }
+    }
+  }, 1000);
+}
+
+function renderCard(){
+  clearAllTimers();
+  const item = currentItem();
+  const items = DECKS[item.radical];
+  document.getElementById('deckRadicalLabel').textContent = LABELS[item.radical];
+  document.getElementById('deckCounter').textContent = (current.pos+1)+' / '+current.queue.length;
+  const wrongSoFar = crossWrongItems(item.radical);
+  const indicator = document.getElementById('mistakeIndicator');
+  document.getElementById('mistakeCount').textContent = wrongSoFar.length;
+  indicator.style.display = wrongSoFar.length>0 ? 'inline' : 'none';
+  document.getElementById('deckKanji').textContent = item.kanji;
+  typewriter(document.getElementById('deckQuestion'), 'これ、なんて読む？', 55);
+
+  const reveal = document.getElementById('deckReveal');
+  const choicesWrap = document.getElementById('deckChoices');
+  choicesWrap.innerHTML = '';
+  reveal.classList.remove('show');
+
+  const pool = items.filter(s=>s.reading!==item.reading);
+  const wrongs = shuffle(pool).slice(0,3).map(s=>s.reading);
+  const options = shuffle([item.reading, ...wrongs]);
+
+  options.forEach(optText=>{
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.textContent = optText;
+    if(item.answered){
+      btn.disabled = true;
+      if(optText === item.reading) btn.classList.add('right');
+      else btn.classList.add('dim');
+    } else {
+      btn.addEventListener('click', ()=> answer(item, optText, btn, choicesWrap));
+    }
+    choicesWrap.appendChild(btn);
+  });
+
+  document.getElementById('navPrev').classList.toggle('disabled', current.pos===0);
+
+  if(item.answered){
+    showReveal(item, false);
+  } else {
+    startCountdown(item, choicesWrap);
+  }
+}
+
+function answer(item, picked, btn, choicesWrap){
+  clearAllTimers();
+  item.answered = true;
+  item.everAnswered = true;
+  item.correct = (picked === item.reading);
+  if(!item.correct){ item.triedWrong = true; }
+  recordHistory(item);
+  [...choicesWrap.children].forEach(b=>{
+    b.disabled = true;
+    if(b.textContent === item.reading) b.classList.add('right');
+    else if(b === btn) b.classList.add('wrong');
+    else b.classList.add('dim');
+  });
+  showReveal(item, true);
+}
+
+function timeoutAnswer(item, choicesWrap){
+  clearAllTimers();
+  item.answered = true;
+  item.everAnswered = true;
+  item.correct = false;
+  item.triedWrong = true;
+  recordHistory(item);
+  [...choicesWrap.children].forEach(b=>{
+    b.disabled = true;
+    if(b.textContent === item.reading) b.classList.add('right');
+    else b.classList.add('dim');
+  });
+  showReveal(item, true);
+}
+
+function scheduleAdvance(){
+  if(advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
+  advanceTimer = setTimeout(()=>{
+    const card = document.getElementById('deckCard');
+    card.classList.add('slide-out');
+    setTimeout(()=>{
+      if(current.pos < current.queue.length-1){
+        current.pos++;
+        renderCard();
+        const freshCard = document.getElementById('deckCard');
+        freshCard.classList.remove('slide-out');
+        freshCard.classList.add('slide-in');
+        requestAnimationFrame(()=>{
+          requestAnimationFrame(()=>{ freshCard.classList.remove('slide-in'); });
+        });
+      } else {
+        finishPass();
+      }
+    }, 350);
+  }, 1500);
+}
+
+function showReveal(item, animate){
+  const reveal = document.getElementById('deckReveal');
+  document.getElementById('revealResult').textContent = item.correct ? 'せいかい' : 'おしい';
+  document.getElementById('revealYomi').textContent = item.kanji+'（'+item.reading+'）';
+  reveal.classList.add('show');
+  const meaningEl = document.getElementById('revealMeaning');
+  if(animate){
+    typewriter(meaningEl, item.meaning, 22, ()=> scheduleAdvance());
+  } else {
+    meaningEl.innerHTML = item.meaning;
+    scheduleAdvance();
+  }
+}
+
+document.getElementById('navPrev').addEventListener('click', ()=>{
+  clearAllTimers();
+  if(current.pos>0){ current.pos--; renderCard(); }
+});
+
+function finishPass(){
+  const lastItem = current.queue[current.queue.length-1];
+  const wrongItems = crossWrongItems(lastItem.radical);
+  if(wrongItems.length>0){
+    renderMistakes(wrongItems);
+    setView('mistakes');
+  } else {
+    const items = DECKS[current.radical] || DECKS[lastItem.radical];
+    document.getElementById('completeTitle').textContent = LABELS[current.radical||lastItem.radical]+'、ぜんぶ読み終わりました。';
+    document.getElementById('completeSub').textContent = '全'+items.length+'字、すべて正解です。';
+    setView('complete');
+  }
+}
+
+function renderMistakes(wrongItems){
+  const list = document.getElementById('mistakesList');
+  list.innerHTML = '';
+  wrongItems.forEach(item=>{
+    const li = document.createElement('li');
+    const left = document.createElement('span');
+    left.className = 'm-kanji';
+    left.textContent = item.kanji+'　'+item.reading;
+    const right = document.createElement('span');
+    right.className = 'm-retry';
+    right.textContent = 'もう一度';
+    right.addEventListener('click', ()=>{
+      current.radical = null;
+      current.queue = [item];
+      current.pos = 0;
+      item.answered = false;
+      setView('deck');
+      renderCard();
+    });
+    li.appendChild(left);
+    li.appendChild(right);
+    list.appendChild(li);
+  });
+  document.getElementById('retryMistakesBtn').onclick = ()=>{
+    current.radical = null;
+    current.queue = shuffle(wrongItems.slice());
+    current.pos = 0;
+    wrongItems.forEach(it=> it.answered=false);
+    setView('deck');
+    renderCard();
+  };
+}
+
+document.getElementById('backFromMistakes').addEventListener('click', ()=> setView('title'));
+document.getElementById('backFromComplete').addEventListener('click', ()=> setView('title'));
+
+document.getElementById('openAuthor').addEventListener('click', ()=> setView('author'));
+document.getElementById('backFromAuthor').addEventListener('click', ()=> setView('title'));
+
+function statusOf(item){
+  if(!item.everAnswered) return {label:'未挑戦', cls:'status-new'};
+  if(item.correct && !item.triedWrong) return {label:'一発正解', cls:'status-first'};
+  if(item.correct && item.triedWrong) return {label:'克服', cls:'status-mastered'};
+  return {label:'挑戦中', cls:'status-trying'};
+}
+
+function renderHistory(){
+  const body = document.getElementById('historyBody');
+  body.innerHTML = '';
+
+  if(historyLog.length===0){
+    const empty = document.createElement('p');
+    empty.className = 'history-empty';
+    empty.textContent = 'まだ何も挑戦していない。クイズに答えると、ここに積み上がっていく。';
+    body.appendChild(empty);
+    return;
+  }
+
+  const totalDone = ['uo','mushi','advanced'].reduce((n,r)=> n + DECKS[r].filter(it=>it.correct).length, 0);
+  const totalAll = ['uo','mushi','advanced'].reduce((n,r)=> n + DECKS[r].length, 0);
+  const summary = document.createElement('p');
+  summary.className = 'history-summary';
+  summary.textContent = '挑戦した字：'+historyLog.length+'　／　正解した字：'+totalDone+' / '+totalAll;
+  body.appendChild(summary);
+
+  const list = document.createElement('div');
+  list.className = 'history-log';
+  // 新しく挑戦したものが上に積み上がる
+  historyLog.slice().reverse().forEach(item=>{
+    const row = document.createElement('div');
+    row.className = 'history-row';
+    const rad = document.createElement('span');
+    rad.className = 'h-radical';
+    rad.textContent = LABELS[item.radical];
+    const k = document.createElement('span');
+    k.className = 'h-kanji';
+    k.textContent = item.kanji;
+    const r = document.createElement('span');
+    r.className = 'h-reading';
+    r.textContent = item.reading;
+    const st = statusOf(item);
+    const s = document.createElement('span');
+    s.className = 'h-status '+st.cls;
+    s.textContent = st.label;
+    row.appendChild(rad);
+    row.appendChild(k);
+    row.appendChild(r);
+    row.appendChild(s);
+    list.appendChild(row);
+  });
+  body.appendChild(list);
+}
+
+document.getElementById('openHistoryTitle').addEventListener('click', ()=>{ renderHistory(); setView('history'); });
+document.getElementById('backFromHistory').addEventListener('click', ()=> setView('title'));
+
+
+// keyboard support
+document.addEventListener('keydown', (e)=>{
+  if(document.body.dataset.view !== 'deck') return;
+  if(e.key === 'ArrowLeft'){ document.getElementById('navPrev').click(); }
+});
+</script>
 </body>
 </html>

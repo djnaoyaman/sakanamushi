@@ -1336,8 +1336,9 @@ function timeoutAnswer(item, choicesWrap){
   showReveal(item, true);
 }
 
-function scheduleAdvance(){
+function scheduleAdvance(correct){
   if(advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
+  const holdTime = correct ? 1500 : 3000;
   advanceTimer = setTimeout(()=>{
     const card = document.getElementById('deckCard');
     card.classList.add('slide-out');
@@ -1355,7 +1356,7 @@ function scheduleAdvance(){
         finishPass();
       }
     }, 350);
-  }, 1500);
+  }, holdTime);
 }
 
 function showReveal(item, animate){
@@ -1365,10 +1366,10 @@ function showReveal(item, animate){
   reveal.classList.add('show');
   const meaningEl = document.getElementById('revealMeaning');
   if(animate){
-    typewriter(meaningEl, item.meaning, 22, ()=> scheduleAdvance());
+    typewriter(meaningEl, item.meaning, 22, ()=> scheduleAdvance(item.correct));
   } else {
     meaningEl.innerHTML = item.meaning;
-    scheduleAdvance();
+    scheduleAdvance(item.correct);
   }
 }
 

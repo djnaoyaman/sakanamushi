@@ -1,0 +1,19 @@
+{
+  "name": "花鳥風月、そして魚と虫",
+  "short_name": "花鳥風月・魚と虫",
+  "description": "花に、鳥に、風に、月に。そして、魚と虫にも。へんを見れば、なかまがわかる。一字ずつ、大きく読む。読めたら、うれしい。魚・虫・鳥・植物、380字をこえる漢字クイズ図鑑。",
+  "lang": "ja",
+  "start_url": "/sakanamushi/",
+  "scope": "/sakanamushi/",
+  "display": "browser",
+  "theme_color": "#1c1c1a",
+  "background_color": "#f7f5ef",
+  "icons": [
+    {
+      "src": "/sakanamushi/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

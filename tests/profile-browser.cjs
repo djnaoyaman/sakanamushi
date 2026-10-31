@@ -1,6 +1,15 @@
 const { chromium } = require('playwright');
 const fs = require('node:fs');
 const assert = require('node:assert/strict');
+// The favicon must reuse the existing Apple icon, not a blank data PNG or new artwork.
+const indexSource = fs.readFileSync('index.html', 'utf8');
+assert.match(indexSource, /<link rel="icon" type="image\/png" href="\.\/favicon\.png">/);
+const appleTag = indexSource.match(/<link[^>]*rel="apple-touch-icon"[^>]*>/)[0];
+const appleData = appleTag.match(/href="data:image\/png;base64,([^"]+)"/)[1];
+const faviconBytes = fs.readFileSync('favicon.png');
+assert.deepEqual(faviconBytes, Buffer.from(appleData, 'base64'), 'favicon preserves existing site artwork bytes');
+assert.ok(faviconBytes.length > 1000, 'favicon is not the previous single-color placeholder');
+
 (async () => {
  const browser = await chromium.launch();
  fs.mkdirSync('test-artifacts/profile', { recursive: true });
@@ -40,3 +49,4 @@ const assert = require('node:assert/strict');
   await browser.close();
  }
 })().catch(e=>{console.error(e);process.exit(1);});
+

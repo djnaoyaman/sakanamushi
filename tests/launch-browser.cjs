@@ -47,6 +47,7 @@ const fs = require('node:fs');
      assert.equal(await page.locator('#deckQuestion').textContent(),'これ、なんて読む？');
     }
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
+    await page.waitForFunction(()=>getComputedStyle(document.getElementById('deckCard')).opacity==='1' && document.getElementById('deckQuestion').textContent==='これ、なんて読む？');
     await page.screenshot({path:`test-artifacts/profile/launch-${reducedMotion}-${width}.png`,fullPage:true});
     await page.locator('#deckBack').click();await page.locator('#pickMushi').click();
     assert.equal(await page.locator('#deckChoices button').count(),4);

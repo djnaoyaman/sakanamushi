@@ -14,7 +14,7 @@ const fs = require('node:fs');
     await page.locator('#splashScreen').click();
     const control=page.locator('#soundToggle');
     await page.keyboard.press('Tab');
-    await control.focus();
+    assert.equal(await control.evaluate(e=>e===document.activeElement),true,'sound toggle reachable by Tab');
     assert.equal(await control.evaluate(e=>e===document.activeElement),true);
     assert.notEqual(await control.evaluate(e=>getComputedStyle(e).outlineStyle),'none');
     await control.press('Enter'); assert.equal(await control.textContent(),'BGM OFF');
@@ -50,6 +50,24 @@ const fs = require('node:fs');
     await page.screenshot({path:`test-artifacts/profile/launch-${reducedMotion}-${width}.png`,fullPage:true});
     await page.locator('#deckBack').click();await page.locator('#pickMushi').click();
     assert.equal(await page.locator('#deckChoices button').count(),4);
+    // Leaving mid-reveal must not schedule a stale advance in another deck.
+    const nextReading=await page.evaluate(()=>currentItem().reading);
+    await page.getByRole('button',{name:nextReading,exact:true}).click();
+    await page.locator('#deckBack').click();
+    await page.locator('#pickTori').click();
+    const stable=await page.locator('#deckCounter').textContent();
+    await page.waitForTimeout(4500);
+    assert.equal(await page.locator('#deckCounter').textContent(),stable);
+    // Explicitly enter the outgoing transition, then navigate before it fires.
+    await page.evaluate(()=>{clearAllTimers();scheduleAdvance(true);});
+    if(reducedMotion==='no-preference') {
+     await page.waitForFunction(()=>document.getElementById('deckCard').classList.contains('slide-out'));
+     await page.locator('#deckBack').click();await page.locator('#pickShokubutsu').click();
+     const counter=await page.locator('#deckCounter').textContent();
+     await page.waitForTimeout(500);
+     assert.equal(await page.locator('#deckCounter').textContent(),counter);
+     assert.equal(await page.locator('#deckCard').evaluate(e=>e.classList.contains('slide-out')),false);
+    }
     assert.deepEqual(errors,[]); results.push({width,height,reducedMotion,inset,errors}); await page.close();
    }
   }

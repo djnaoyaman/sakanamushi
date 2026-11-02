@@ -1271,12 +1271,19 @@ function currentItem(){
 }
 
 let advanceTimer = null;
+let transitionTimer = null;
 let countdownTimer = null;
 let timeLeft = 30;
 
 function clearAllTimers(){
   if(advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
   if(countdownTimer){ clearInterval(countdownTimer); countdownTimer = null; }
+  if(transitionTimer){ clearTimeout(transitionTimer); transitionTimer = null; }
+  for(const id of ['deckQuestion', 'revealMeaning']){
+    const el = document.getElementById(id);
+    if(el && el._twTimer){ clearTimeout(el._twTimer); el._twTimer = null; }
+  }
+  document.getElementById('deckCard').classList.remove('slide-out', 'slide-in');
   const td = document.getElementById('timerDisplay');
   if(td) td.textContent = '';
 }
@@ -1409,7 +1416,8 @@ function scheduleAdvance(correct){
   advanceTimer = setTimeout(()=>{
     const card = document.getElementById('deckCard');
     card.classList.add('slide-out');
-    setTimeout(()=>{
+    transitionTimer = setTimeout(()=>{
+      transitionTimer = null;
       if(current.pos < current.queue.length-1){
         current.pos++;
         renderCard();

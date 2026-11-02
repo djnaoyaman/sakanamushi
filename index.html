@@ -1279,7 +1279,7 @@ function clearAllTimers(){
   if(advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
   if(countdownTimer){ clearInterval(countdownTimer); countdownTimer = null; }
   if(transitionTimer){ clearTimeout(transitionTimer); transitionTimer = null; }
-  for(const id of ['deckQuestion', 'revealMeaning']){
+  for(const id of ['revealMeaning']){
     const el = document.getElementById(id);
     if(el && el._twTimer){ clearTimeout(el._twTimer); el._twTimer = null; }
   }

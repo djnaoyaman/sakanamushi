@@ -49,7 +49,7 @@
 <meta name="twitter:image:alt" content="花鳥風月、そして魚と虫を、水彩でえがいた一枚。">
 
 <!-- LLMO: 構造化データ（AIの引用・要約に対応） -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "花鳥風月、そして魚と虫", "url": "https://djnaoyaman.github.io/sakanamushi/", "description": "花に、鳥に、風に、月に。そして、魚と虫にも。へんを見れば、なかまがわかる。一字ずつ、大きく読む。読めたら、うれしい。魚・虫・鳥・植物、380字をこえる漢字クイズ図鑑。", "inLanguage": "ja", "learningResourceType": "クイズ", "educationalUse": "自習", "audience": {"@type": "EducationalAudience", "educationalRole": "student"}, "author": {"@type": "Person", "name": "宮崎直哉", "url": "https://djnaoyaman.github.io/profile.html"}, "dateModified": "2026-11-02"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "花鳥風月、そして魚と虫", "url": "https://djnaoyaman.github.io/sakanamushi/", "description": "花に、鳥に、風に、月に。そして、魚と虫にも。へんを見れば、なかまがわかる。一字ずつ、大きく読む。読めたら、うれしい。魚・虫・鳥・植物、380字をこえる漢字クイズ図鑑。", "inLanguage": "ja", "learningResourceType": "クイズ", "educationalUse": "自習", "audience": {"@type": "EducationalAudience", "educationalRole": "student"}, "author": {"@type": "Person", "name": "宮崎直哉", "url": "https://djnaoyaman.github.io/profile.html"}, "dateModified": "2026-11-02T09:35:00+09:00"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -122,6 +122,14 @@
     letter-spacing:.1em;
   }
 
+  .title-share{width:100%;max-width:420px;margin-top:18px;text-align:center;font-size:.75rem;}
+  .title-share-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;}
+  .title-share button{font:inherit;color:var(--ink);background:transparent;border:1px solid var(--gray-light);padding:9px 13px;cursor:pointer;}
+  .title-share button[aria-disabled="true"]{opacity:.6;cursor:wait;}
+  .title-share :focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
+  #shareStatus{min-height:1.8em;margin:8px 0;color:var(--gray);overflow-wrap:anywhere;}
+  #shareManual label{display:block;margin-bottom:6px;}
+  #shareManualUrl{box-sizing:border-box;width:100%;min-width:0;font:inherit;padding:8px;color:var(--ink);background:var(--paper);border:1px solid var(--gray-light);}
   /* ---------------- TITLE ---------------- */
   .screen-title{
     flex-direction:column;
@@ -592,6 +600,17 @@
         <div class="count"><span id="advancedCount">0</span>字</div>
       </div>
     </div>
+    <div class="title-share" aria-label="このサイトを共有">
+      <div class="title-share-actions">
+        <button type="button" id="shareSite">共有する</button>
+        <button type="button" id="copySiteLink">リンクをコピー</button>
+      </div>
+      <p id="shareStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="shareManual" hidden>
+        <label for="shareManualUrl">このURLを選択してコピーしてください。</label>
+        <input id="shareManualUrl" type="text" readonly value="https://djnaoyaman.github.io/sakanamushi/">
+      </div>
+    </div>
   </div>
   <div class="title-page title-page-author">
     <div class="title-author-link" id="openAuthor">作者</div>
@@ -601,7 +620,7 @@
 <div class="screen screen-author">
   <div class="author-eyebrow">AUTHOR</div>
   <div class="author-profile">
-<p>生きものの名前を、漢字からたどる図鑑です。読めなかった一字が、身近な発見になるように。</p><p class="name">宮崎直哉</p><p>読み方や意味を確かめながら、一字ずつまとめています。</p><p><a href="https://djnaoyaman.github.io/profile.html">作者について ↗</a></p><p>最終更新：<time datetime="2026-11-02">2026年11月2日</time>（日本時間・ページ情報）</p>
+<p>生きものの名前を、漢字からたどる図鑑です。読めなかった一字が、身近な発見になるように。</p><p class="name">宮崎直哉</p><p>読み方や意味を確かめながら、一字ずつまとめています。</p><p><a href="https://djnaoyaman.github.io/profile.html">作者について ↗</a></p><p>最終更新：<time datetime="2026-11-02T09:35:00+09:00">2026年11月2日 09:35</time>（日本時間・ページ情報）</p>
 </div>
 <div class="author-back" id="backFromAuthor">タイトルへもどる</div>
 </div>
@@ -1567,6 +1586,50 @@ function renderHistory(){
 
 document.getElementById('openHistoryTitle').addEventListener('click', ()=>{ renderHistory(); setView('history'); });
 document.getElementById('backFromHistory').addEventListener('click', ()=> setView('title'));
+
+
+// Title-screen sharing is deliberately separate from quiz, sound and analytics.
+(() => {
+  const url = 'https://djnaoyaman.github.io/sakanamushi/';
+  const share = document.getElementById('shareSite');
+  const copy = document.getElementById('copySiteLink');
+  const status = document.getElementById('shareStatus');
+  const manual = document.getElementById('shareManual');
+  let busy = false;
+  async function run(kind){
+    if(busy || document.body.dataset.view !== 'title') return;
+    busy = true;
+    for(const button of [share, copy]) button.setAttribute('aria-disabled', 'true');
+    status.textContent = '';
+    manual.hidden = true;
+    try {
+      if(kind === 'share'){
+        if(typeof navigator.share !== 'function'){
+          status.textContent = 'このブラウザでは共有メニューを使えません。「リンクをコピー」をお使いください。';
+          return;
+        }
+        await navigator.share({url});
+        status.textContent = '共有メニューでの操作を完了しました。';
+      } else {
+        if(typeof navigator.clipboard?.writeText !== 'function') throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(url);
+        status.textContent = 'リンクをコピーしました。';
+      }
+    } catch(error){
+      if(kind === 'share'){
+        if(error?.name !== 'AbortError') status.textContent = '共有できませんでした。「リンクをコピー」をお試しください。';
+      } else {
+        status.textContent = '自動コピーできませんでした。下のURLを手動でコピーしてください。';
+        manual.hidden = false;
+      }
+    } finally {
+      busy = false;
+      for(const button of [share, copy]) button.setAttribute('aria-disabled', 'false');
+    }
+  }
+  share.addEventListener('click', () => run('share'));
+  copy.addEventListener('click', () => run('copy'));
+})();
 
 
 // keyboard support

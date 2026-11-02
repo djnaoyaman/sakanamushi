@@ -1,7 +1,7 @@
 name: Author profile browser checks
 on:
   pull_request:
-    paths: ['profile.html', 'index.html', 'style.css', 'script.js', 'tests/profile-browser.cjs', 'tests/launch-browser.cjs', '.github/workflows/profile-checks.yml']
+    paths: ['profile.html', 'index.html', 'style.css', 'script.js', 'tests/profile-browser.cjs', 'tests/launch-browser.cjs', 'tests/share-browser.cjs', '.github/workflows/profile-checks.yml']
 permissions:
   contents: read
 jobs:
@@ -22,6 +22,7 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/profile-http.log 2>&1 &
           node tests/profile-browser.cjs
           node tests/launch-browser.cjs
+          node tests/share-browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

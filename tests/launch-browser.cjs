@@ -13,7 +13,11 @@ const fs = require('node:fs');
     await page.goto('http://127.0.0.1:8765/index.html');
     await page.locator('#splashScreen').click();
     const control=page.locator('#soundToggle');
-    await page.keyboard.press('Tab');
+    // New title actions participate in the native tab order after the splash.
+    for(let tab=0;tab<5;tab++){
+      await page.keyboard.press('Tab');
+      if(await control.evaluate(e=>e===document.activeElement)) break;
+    }
     assert.equal(await control.evaluate(e=>e===document.activeElement),true,'sound toggle reachable by Tab');
     assert.equal(await control.evaluate(e=>e===document.activeElement),true);
     assert.notEqual(await control.evaluate(e=>getComputedStyle(e).outlineStyle),'none');

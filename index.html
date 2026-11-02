@@ -49,7 +49,7 @@
 <meta name="twitter:image:alt" content="花鳥風月、そして魚と虫を、水彩でえがいた一枚。">
 
 <!-- LLMO: 構造化データ（AIの引用・要約に対応） -->
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "花鳥風月、そして魚と虫", "url": "https://djnaoyaman.github.io/sakanamushi/", "description": "花に、鳥に、風に、月に。そして、魚と虫にも。へんを見れば、なかまがわかる。一字ずつ、大きく読む。読めたら、うれしい。魚・虫・鳥・植物、380字をこえる漢字クイズ図鑑。", "inLanguage": "ja", "learningResourceType": "クイズ", "educationalUse": "自習", "audience": {"@type": "EducationalAudience", "educationalRole": "student"}, "author": {"@type": "Person", "name": "宮崎直哉", "url": "https://djnaoyaman.github.io/profile.html"}, "dateModified": "2026-11-01"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "花鳥風月、そして魚と虫", "url": "https://djnaoyaman.github.io/sakanamushi/", "description": "花に、鳥に、風に、月に。そして、魚と虫にも。へんを見れば、なかまがわかる。一字ずつ、大きく読む。読めたら、うれしい。魚・虫・鳥・植物、380字をこえる漢字クイズ図鑑。", "inLanguage": "ja", "learningResourceType": "クイズ", "educationalUse": "自習", "audience": {"@type": "EducationalAudience", "educationalRole": "student"}, "author": {"@type": "Person", "name": "宮崎直哉", "url": "https://djnaoyaman.github.io/profile.html"}, "dateModified": "2026-11-02"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -159,8 +159,8 @@
   }
   .sound-toggle{
     position:fixed;
-    bottom:16px;
-    right:16px;
+    bottom:calc(16px + env(safe-area-inset-bottom, 0px));
+    right:calc(16px + env(safe-area-inset-right, 0px));
     z-index:60;
     font-size:.7rem;
     letter-spacing:.1em;
@@ -173,7 +173,7 @@
   }
   .sound-toggle:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
   @media (max-width:520px){
-    .sound-toggle{bottom:10px;right:10px;padding:6px 11px;font-size:.65rem;}
+    .sound-toggle{bottom:calc(10px + env(safe-area-inset-bottom, 0px));right:calc(10px + env(safe-area-inset-right, 0px));padding:6px 11px;font-size:.65rem;}
   }
   .title-eyebrow{font-size:.72rem;letter-spacing:.3em;color:var(--gray);margin-bottom:6px;}
   .title-main{
@@ -415,6 +415,11 @@
   }
   .deck-card.slide-out{transform:translateX(-36px);opacity:0;}
   .deck-card.slide-in{transform:translateX(36px);opacity:0;}
+  @media (prefers-reduced-motion: reduce){
+    .deck-card, .author-kanji-link{transition:none;}
+    .deck-card.slide-out, .deck-card.slide-in{transform:none;opacity:1;}
+    .author-kanji-link:hover{transform:none;}
+  }
   .deck-row-main{
     display:grid;
     grid-template-columns:1.3fr 1fr;
@@ -596,7 +601,7 @@
 <div class="screen screen-author">
   <div class="author-eyebrow">AUTHOR</div>
   <div class="author-profile">
-<p>生きものの名前を、漢字からたどる図鑑です。読めなかった一字が、身近な発見になるように。</p><p class="name">宮崎直哉</p><p>読み方や意味を確かめながら、一字ずつまとめています。</p><p><a href="https://djnaoyaman.github.io/profile.html">作者について ↗</a></p><p>最終更新：<time datetime="2026-11-01">2026年11月1日</time>（日本時間・ページ情報）</p>
+<p>生きものの名前を、漢字からたどる図鑑です。読めなかった一字が、身近な発見になるように。</p><p class="name">宮崎直哉</p><p>読み方や意味を確かめながら、一字ずつまとめています。</p><p><a href="https://djnaoyaman.github.io/profile.html">作者について ↗</a></p><p>最終更新：<time datetime="2026-11-02">2026年11月2日</time>（日本時間・ページ情報）</p>
 </div>
 <div class="author-back" id="backFromAuthor">タイトルへもどる</div>
 </div>
@@ -1266,18 +1271,30 @@ function currentItem(){
 }
 
 let advanceTimer = null;
+let transitionTimer = null;
 let countdownTimer = null;
 let timeLeft = 30;
 
 function clearAllTimers(){
   if(advanceTimer){ clearTimeout(advanceTimer); advanceTimer = null; }
   if(countdownTimer){ clearInterval(countdownTimer); countdownTimer = null; }
+  if(transitionTimer){ clearTimeout(transitionTimer); transitionTimer = null; }
+  for(const id of ['revealMeaning']){
+    const el = document.getElementById(id);
+    if(el && el._twTimer){ clearTimeout(el._twTimer); el._twTimer = null; }
+  }
+  document.getElementById('deckCard').classList.remove('slide-out', 'slide-in');
   const td = document.getElementById('timerDisplay');
   if(td) td.textContent = '';
 }
 
 function typewriter(el, html, speed, onDone){
   if(el._twTimer){ clearTimeout(el._twTimer); el._twTimer = null; }
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.innerHTML = html;
+    if(onDone) onDone();
+    return;
+  }
   const tokens = html.match(/<ruby>[\s\S]*?<\/ruby>|[\s\S]/g) || [];
   el.innerHTML = '';
   let i = 0;
@@ -1399,7 +1416,8 @@ function scheduleAdvance(correct){
   advanceTimer = setTimeout(()=>{
     const card = document.getElementById('deckCard');
     card.classList.add('slide-out');
-    setTimeout(()=>{
+    transitionTimer = setTimeout(()=>{
+      transitionTimer = null;
       if(current.pos < current.queue.length-1){
         current.pos++;
         renderCard();
@@ -1412,7 +1430,7 @@ function scheduleAdvance(correct){
       } else {
         finishPass();
       }
-    }, 350);
+    }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 350);
   }, holdTime);
 }
 

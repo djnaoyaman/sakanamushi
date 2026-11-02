@@ -1,7 +1,7 @@
 name: Author profile browser checks
 on:
   pull_request:
-    paths: ['profile.html', 'index.html', 'style.css', 'script.js', 'tests/profile-browser.cjs', 'tests/launch-browser.cjs', 'tests/share-browser.cjs', '.github/workflows/profile-checks.yml']
+    paths: ['profile.html', 'index.html', 'style.css', 'script.js', 'tests/profile-browser.cjs', 'tests/launch-browser.cjs', 'tests/share-browser.cjs', 'tests/icons-browser.cjs', 'site.webmanifest', 'android-chrome-*.png', 'tools/export-android-icons.py', '.github/workflows/profile-checks.yml']
 permissions:
   contents: read
 jobs:
@@ -23,6 +23,7 @@ jobs:
           node tests/profile-browser.cjs
           node tests/launch-browser.cjs
           node tests/share-browser.cjs
+          node tests/icons-browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
